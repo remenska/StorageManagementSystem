@@ -186,84 +186,384 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Class" xmi:id="_C9zhq9tIEeOBr-ZtRbdM3Q" name="RequestPreparationAgent">
-    <ownedOperation xmi:id="_C9zhrNtIEeOBr-ZtRbdM3Q" name="initialize"/>
     <ownedOperation xmi:id="_C9zhrdtIEeOBr-ZtRbdM3Q" name="execute"/>
     <ownedOperation xmi:id="_C9zhrttIEeOBr-ZtRbdM3Q" name="prepareNewReplicas"/>
-    <ownedOperation xmi:id="_C9zhr9tIEeOBr-ZtRbdM3Q" name="__getNewReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C9zhs9tIEeOBr-ZtRbdM3Q" name="__getExistingFiles" visibility="private"/>
-    <ownedOperation xmi:id="_C9zhwNtIEeOBr-ZtRbdM3Q" name="__getFileSize" visibility="private"/>
-    <ownedOperation xmi:id="_C9zhzdtIEeOBr-ZtRbdM3Q" name="__getFileReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C90IGttIEeOBr-ZtRbdM3Q" name="__reportProblematicFiles" visibility="private"/>
+    <ownedOperation xmi:id="_C9zhr9tIEeOBr-ZtRbdM3Q" name="__getNewReplicas" visibility="private">
+      <ownedParameter xmi:id="_gVFsEP-PEeOAFvlXGtzbgg" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jAgJcP-PEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jAfiYP-PEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C9zhs9tIEeOBr-ZtRbdM3Q" name="__getExistingFiles" visibility="private">
+      <ownedParameter xmi:id="_qCTYQP-PEeOAFvlXGtzbgg" name="lnfs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r0tKAP-PEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r0si8P-PEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_uXrdEP-PEeOAFvlXGtzbgg" name="exist" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xLclMP-PEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xLb-IP-PEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_xWzgoP-PEeOAFvlXGtzbgg" name="terminal" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zm7wMP-PEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zm7JIP-PEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_z61joP-PEeOAFvlXGtzbgg" name="failed" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2vHpIP-PEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2vHCEP-PEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C9zhwNtIEeOBr-ZtRbdM3Q" name="__getFileSize" visibility="private">
+      <ownedParameter xmi:id="_Iit7sP-SEeOAFvlXGtzbgg" name="lnfs" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LLjmMf-SEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LLjmMP-SEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_Pj_mEP-SEeOAFvlXGtzbgg" name="fileSizes" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_T01wMP-SEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_T01JIP-SEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_UFFLoP-SEeOAFvlXGtzbgg" name="terminal" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WmEhsP-SEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WmD6oP-SEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_W1SpcP-SEeOAFvlXGtzbgg" name="failed" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZF1IsP-SEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZF0hoP-SEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C9zhzdtIEeOBr-ZtRbdM3Q" name="__getFileReplicas" visibility="private">
+      <ownedParameter xmi:id="_j43YAP-TEeOAFvlXGtzbgg" name="lfns">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mj9sUP-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mj9FQP-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_p9Vb4P-TEeOAFvlXGtzbgg" name="fileReplicas" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sMeM8P-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sMdl4P-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_sZul0P-TEeOAFvlXGtzbgg" name="terminal" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uh7BYP-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uh6aUP-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_tC764P-TEeOAFvlXGtzbgg" name="failed" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v2Y58P-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v2YS4P-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
     <ownedOperation xmi:id="_DViYUP7mEeOM5abBCfF44A" name="break"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_C90IH9tIEeOBr-ZtRbdM3Q" name="StageRequestAgent">
-    <ownedOperation xmi:id="_C90IINtIEeOBr-ZtRbdM3Q" name="initialize"/>
     <ownedOperation xmi:id="_C90IIdtIEeOBr-ZtRbdM3Q" name="execute"/>
     <ownedOperation xmi:id="_C90IIttIEeOBr-ZtRbdM3Q" name="getStorageUsage"/>
     <ownedOperation xmi:id="_C90II9tIEeOBr-ZtRbdM3Q" name="submitStageRequests"/>
-    <ownedOperation xmi:id="_C90IJNtIEeOBr-ZtRbdM3Q" name="_getMissingReplicas" visibility="protected"/>
+    <ownedOperation xmi:id="_C90IJNtIEeOBr-ZtRbdM3Q" name="_getMissingReplicas" visibility="protected">
+      <ownedParameter xmi:id="_75eUgP-XEeOAFvlXGtzbgg" name="missingReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-fVjgP-XEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-fU8cP-XEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
     <ownedOperation xmi:id="_C90IKNtIEeOBr-ZtRbdM3Q" name="_getOnlineReplicas" visibility="protected"/>
-    <ownedOperation xmi:id="_C90ILNtIEeOBr-ZtRbdM3Q" name="_getOfflineReplicas" visibility="protected"/>
-    <ownedOperation xmi:id="_C90IMNtIEeOBr-ZtRbdM3Q" name="__usage" visibility="private"/>
-    <ownedOperation xmi:id="_C90IM9tIEeOBr-ZtRbdM3Q" name="__cache" visibility="private"/>
-    <ownedOperation xmi:id="_C90INdtIEeOBr-ZtRbdM3Q" name="__add" visibility="private"/>
-    <ownedOperation xmi:id="_C90IONtIEeOBr-ZtRbdM3Q" name="_issuePrestageRequests" visibility="protected"/>
-    <ownedOperation xmi:id="_C90IPdtIEeOBr-ZtRbdM3Q" name="__sortBySE" visibility="private"/>
-    <ownedOperation xmi:id="_C90IPttIEeOBr-ZtRbdM3Q" name="__getStagedReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C90IQttIEeOBr-ZtRbdM3Q" name="__getWaitingReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C90IRttIEeOBr-ZtRbdM3Q" name="__getOfflineReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C90ISttIEeOBr-ZtRbdM3Q" name="__addAssociatedReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C90ITttIEeOBr-ZtRbdM3Q" name="__checkIntegrity" visibility="private"/>
-    <ownedOperation xmi:id="_C90IWdtIEeOBr-ZtRbdM3Q" name="__reportProblematicFiles" visibility="private"/>
+    <ownedOperation xmi:id="_C90ILNtIEeOBr-ZtRbdM3Q" name="_getOfflineReplicas" visibility="protected">
+      <ownedParameter xmi:id="_5IM4AP-dEeOAFvlXGtzbgg" name="offlineReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7qLFgP-dEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qKecP-dEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IONtIEeOBr-ZtRbdM3Q" name="_issuePrestageRequests" visibility="protected">
+      <ownedParameter xmi:id="_j4d1wP-bEeOAFvlXGtzbgg" name="storageElement">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_l35W4P-bEeOAFvlXGtzbgg" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n0Pu0P-bEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n0PHwP-bEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IPttIEeOBr-ZtRbdM3Q" name="__getStagedReplicas" visibility="private">
+      <ownedParameter xmi:id="_WgKmoP-VEeOAFvlXGtzbgg" name="stagedReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a0C2oP-VEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a0CPkP-VEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IQttIEeOBr-ZtRbdM3Q" name="__getWaitingReplicas" visibility="private">
+      <ownedParameter xmi:id="_TD2XIP-dEeOAFvlXGtzbgg" name="waitingReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V8YDcP-dEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V8XcYP-dEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IRttIEeOBr-ZtRbdM3Q" name="__getOfflineReplicas" visibility="private">
+      <ownedParameter xmi:id="_hs9VkP-dEeOAFvlXGtzbgg" name="offlineReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jTfOgP-dEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jTencP-dEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90ISttIEeOBr-ZtRbdM3Q" name="__addAssociatedReplicas" visibility="private">
+      <ownedParameter xmi:id="_iCmvEP-VEeOAFvlXGtzbgg" name="replicasToStage" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kTfMkP-VEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kTelgP-VEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90ITttIEeOBr-ZtRbdM3Q" name="__checkIntegrity" visibility="private">
+      <ownedParameter xmi:id="_t46foP-eEeOAFvlXGtzbgg" name="storageElement">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_vbg60P-eEeOAFvlXGtzbgg" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XjjxwP-fEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XjjKsP-fEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_NsYRQP-fEeOAFvlXGtzbgg" name="onlineReplicaIDs" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R5DGAf-fEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R5DGAP-fEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_SHRIMP-fEeOAFvlXGtzbgg" name="offlineReplicas" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TsCGkf-fEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TsCGkP-fEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_C90IXttIEeOBr-ZtRbdM3Q" name="StageMonitorAgent">
-    <ownedOperation xmi:id="_C90IX9tIEeOBr-ZtRbdM3Q" name="initialize"/>
     <ownedOperation xmi:id="_C90IYNtIEeOBr-ZtRbdM3Q" name="monitorStageRequests"/>
     <ownedOperation xmi:id="_C90IYdtIEeOBr-ZtRbdM3Q" name="execute"/>
-    <ownedOperation xmi:id="_C90IYttIEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" visibility="private"/>
-    <ownedOperation xmi:id="_C90IZ9tIEeOBr-ZtRbdM3Q" name="__newAccountingDict" visibility="private"/>
-    <ownedOperation xmi:id="_C90IaNtIEeOBr-ZtRbdM3Q" name="__getStageSubmittedReplicas" visibility="private"/>
-    <ownedOperation xmi:id="_C90IbNtIEeOBr-ZtRbdM3Q" name="__reportProblematicFiles" visibility="private"/>
-    <ownedOperation xmi:id="_C90IcdtIEeOBr-ZtRbdM3Q" name="__wakeupOldRequests" visibility="private"/>
+    <ownedOperation xmi:id="_C90IYttIEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" visibility="private">
+      <ownedParameter xmi:id="_fsaWsAA4EeSI978P5wLkag" name="storageElement">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_h8bRgAA4EeSI978P5wLkag" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jchyUAA4EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jchLQAA4EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IaNtIEeOBr-ZtRbdM3Q" name="__getStageSubmittedReplicas" visibility="private">
+      <ownedParameter xmi:id="_02tmsAA3EeSI978P5wLkag" name="stageSubmittedReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3_7aYAA3EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3_6zUAA3EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IcdtIEeOBr-ZtRbdM3Q" name="__wakeupOldRequests" visibility="private">
+      <ownedParameter xmi:id="_e7FVgAA6EeSI978P5wLkag" name="oldRequests">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gwL18AA6EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gwLO4AA6EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_C90IddtIEeOBr-ZtRbdM3Q" name="StorageManagerHandler"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_C90IdttIEeOBr-ZtRbdM3Q" name="StorageManagementDB">
-    <ownedOperation xmi:id="_C90Id9tIEeOBr-ZtRbdM3Q" name="getCacheReplicas"/>
-    <ownedOperation xmi:id="_C90IfNtIEeOBr-ZtRbdM3Q" name="updateReplicaFailure"/>
-    <ownedOperation xmi:id="_C90IgNtIEeOBr-ZtRbdM3Q" name="updateReplicaInformation"/>
-    <ownedOperation xmi:id="_C90IhNtIEeOBr-ZtRbdM3Q" name="getSubmittedStagePins"/>
-    <ownedOperation xmi:id="_C90IiNtIEeOBr-ZtRbdM3Q" name="getWaitingReplicas"/>
-    <ownedOperation xmi:id="_C90IjNtIEeOBr-ZtRbdM3Q" name="updateReplicaStatus"/>
-    <ownedOperation xmi:id="_C90IkdtIEeOBr-ZtRbdM3Q" name="getAssociatedReplicas"/>
-    <ownedOperation xmi:id="_C90Im9tIEeOBr-ZtRbdM3Q" name="getOfflineReplicas"/>
-    <ownedOperation xmi:id="_C90In9tIEeOBr-ZtRbdM3Q" name="insertStageRequest"/>
-    <ownedOperation xmi:id="_C90Io9tIEeOBr-ZtRbdM3Q" name="getStageRequests"/>
-    <ownedOperation xmi:id="_C90IqNtIEeOBr-ZtRbdM3Q" name="setStageComplete"/>
-    <ownedOperation xmi:id="_C90IrNtIEeOBr-ZtRbdM3Q" name="wakeupOldRequests"/>
-    <ownedOperation xmi:id="_C90IsdtIEeOBr-ZtRbdM3Q" name="getTasksWithStatus"/>
-    <ownedOperation xmi:id="_C90ItttIEeOBr-ZtRbdM3Q" name="removeTasks"/>
+    <ownedOperation xmi:id="_C90Id9tIEeOBr-ZtRbdM3Q" name="getCacheReplicas">
+      <ownedParameter xmi:id="_AfqLkP-PEeOAFvlXGtzbgg" name="Status">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_GoIlsP-PEeOAFvlXGtzbgg" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NGmd8P-PEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NGl24P-PEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IfNtIEeOBr-ZtRbdM3Q" name="updateReplicaFailure">
+      <ownedParameter xmi:id="_HmwX0P-UEeOAFvlXGtzbgg" name="terminalReplicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J7SmQP-UEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J7R_MP-UEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IgNtIEeOBr-ZtRbdM3Q" name="updateReplicaInformation">
+      <ownedParameter xmi:id="_Nnvp4P-UEeOAFvlXGtzbgg" name="replicaInformation" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Phpx0P-UEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PhpKwP-UEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IhNtIEeOBr-ZtRbdM3Q" name="getSubmittedStagePins">
+      <ownedParameter xmi:id="_B6zFIP-VEeOAFvlXGtzbgg" name="submittedReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EHZfkP-VEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EHY4gP-VEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IiNtIEeOBr-ZtRbdM3Q" name="getWaitingReplicas">
+      <ownedParameter xmi:id="_y1GXsP-cEeOAFvlXGtzbgg" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_002o8P-cEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_002B4P-cEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IjNtIEeOBr-ZtRbdM3Q" name="updateReplicaStatus">
+      <ownedParameter xmi:id="_OloU0P-cEeOAFvlXGtzbgg" name="newReplicaStatus">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_RtlkQP-cEeOAFvlXGtzbgg" name="replicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TaCfAP-cEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TaB38P-cEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IkdtIEeOBr-ZtRbdM3Q" name="getAssociatedReplicas">
+      <ownedParameter xmi:id="_POD74P-eEeOAFvlXGtzbgg" name="replicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q8xgcP-eEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q8w5YP-eEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_XCUiYP-eEeOAFvlXGtzbgg" name="offlineReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZPe9gP-eEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZPeWcP-eEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_ZgZuYP-eEeOAFvlXGtzbgg" name="waitingReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bHLe8P-eEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bHKQ0P-eEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90Im9tIEeOBr-ZtRbdM3Q" name="getOfflineReplicas">
+      <ownedParameter xmi:id="_mO4BkP-dEeOAFvlXGtzbgg" name="offlineReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_obGokP-dEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_obGBgP-dEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90In9tIEeOBr-ZtRbdM3Q" name="insertStageRequest">
+      <ownedParameter xmi:id="_CMFlQP-cEeOAFvlXGtzbgg" name="stageRequests" type="_C98rS9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EXqE8P-cEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EXpd4P-cEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90Io9tIEeOBr-ZtRbdM3Q" name="getStageRequests">
+      <ownedParameter xmi:id="_cMa3MAA3EeSI978P5wLkag" name="replicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dyHCoAA3EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dyF0gAA3EeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_hQem8AA3EeSI978P5wLkag" name="stageRequests" type="_C98rS9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k6QxEAA3EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k6QKAAA3EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IqNtIEeOBr-ZtRbdM3Q" name="setStageComplete">
+      <ownedParameter xmi:id="_4PIpIAA5EeSI978P5wLkag" name="replicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6StDYAA5EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6SscUAA5EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IrNtIEeOBr-ZtRbdM3Q" name="wakeupOldRequests">
+      <ownedParameter xmi:id="_qQYZ0AA6EeSI978P5wLkag" name="replicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sQdbMAA6EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sQc0IAA6EeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_seAH8AA6EeSI978P5wLkag" name="retryIntervalHour">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IsdtIEeOBr-ZtRbdM3Q" name="getTasksWithStatus">
+      <ownedParameter xmi:id="_fRLr4AA7EeSI978P5wLkag" name="status">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_g_JCgAA7EeSI978P5wLkag" name="tasks" type="_C98rPttIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kQamAQA7EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kQamAAA7EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90ItttIEeOBr-ZtRbdM3Q" name="removeTasks">
+      <ownedParameter xmi:id="_IF5bkAA8EeSI978P5wLkag" name="tasks">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JsMrAAA8EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JsMD8AA8EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
     <ownedOperation xmi:id="_C90IuttIEeOBr-ZtRbdM3Q" name="removeUnlinkedReplicas"/>
-    <ownedOperation xmi:id="_C90Iu9tIEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed"/>
+    <ownedOperation xmi:id="_C90Iu9tIEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed">
+      <ownedParameter xmi:id="_bjFXkAA9EeSI978P5wLkag" name="daysOld">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
     <ownedOperation xmi:id="_C90IvdtIEeOBr-ZtRbdM3Q" name="getStagedReplicas"/>
-    <ownedOperation xmi:id="_C90IvttIEeOBr-ZtRbdM3Q" name="setRequest"/>
-    <ownedOperation xmi:id="_C90IxdtIEeOBr-ZtRbdM3Q" name="_createTask"/>
-    <ownedOperation xmi:id="_C90IyttIEeOBr-ZtRbdM3Q" name="_getExistingReplicas"/>
-    <ownedOperation xmi:id="_C90IzttIEeOBr-ZtRbdM3Q" name="__getTaskStateFromReplicaState"/>
-    <ownedOperation xmi:id="_C90I0dtIEeOBr-ZtRbdM3Q" name="_insertReplicaInformation"/>
-    <ownedOperation xmi:id="_C90I1NtIEeOBr-ZtRbdM3Q" name="_insertTaskReplicaInformation"/>
-    <ownedOperation xmi:id="_C90vIttIEeOBr-ZtRbdM3Q" name="__updateTaskStatus"/>
+    <ownedOperation xmi:id="_C90IvttIEeOBr-ZtRbdM3Q" name="setRequest">
+      <ownedParameter xmi:id="_QNSVQABDEeSI978P5wLkag" name="lfnDict">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Rr5BQABDEeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Rr4aMABDEeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_SzydcABDEeSI978P5wLkag" name="source">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_VPmYkABDEeSI978P5wLkag" name="callbackMethod">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_Xef5EABDEeSI978P5wLkag" name="SourceTaskID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IxdtIEeOBr-ZtRbdM3Q" name="_createTask">
+      <ownedParameter xmi:id="_irdrUABEEeSI978P5wLkag" name="source">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_kPTcoABEEeSI978P5wLkag" name="callbackMethod">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_x_ufkABEEeSI978P5wLkag" name="sourceTaskID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_4LnaEABEEeSI978P5wLkag" name="taskID" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IyttIEeOBr-ZtRbdM3Q" name="_getExistingReplicas">
+      <ownedParameter xmi:id="_UZpWEABFEeSI978P5wLkag" name="se">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_WBQNEABFEeSI978P5wLkag" name="lfns">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XrvY8ABFEeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Xrux4ABFEeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_dbNdMABFEeSI978P5wLkag" name="existingReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f9udQABFEeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f9t2MABFEeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90IzttIEeOBr-ZtRbdM3Q" name="__getTaskStateFromReplicaState">
+      <ownedParameter xmi:id="_3Zwp4ABFEeSI978P5wLkag" name="replicaState" type="_C98rJ9tIEeOBr-ZtRbdM3Q"/>
+      <ownedParameter xmi:id="_5e2HEABFEeSI978P5wLkag" name="taskState" type="_C98rPttIEeOBr-ZtRbdM3Q" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90I0dtIEeOBr-ZtRbdM3Q" name="_insertReplicaInformation">
+      <ownedParameter xmi:id="_neRBEABGEeSI978P5wLkag" name="lfn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_oBlwkABGEeSI978P5wLkag" name="se">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90I1NtIEeOBr-ZtRbdM3Q" name="_insertTaskReplicaInformation">
+      <ownedParameter xmi:id="_GUE3oABHEeSI978P5wLkag" name="taskID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_Hyv1EABHEeSI978P5wLkag" name="replicaIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C90vIttIEeOBr-ZtRbdM3Q" name="__updateTaskStatus">
+      <ownedParameter xmi:id="_jjpJIABHEeSI978P5wLkag" name="taskIDs">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lG8u8ABHEeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lG8H4ABHEeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_lVikkABHEeSI978P5wLkag" name="newTaskStatus">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
     <ownedOperation xmi:id="_vYlE0NxuEeO5dZd1SGUD5w" name="blabla"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_C90vJ9tIEeOBr-ZtRbdM3Q" name="RequestFinalizationAgent">
-    <ownedOperation xmi:id="_C90vKNtIEeOBr-ZtRbdM3Q" name="initialize"/>
     <ownedOperation xmi:id="_C90vKdtIEeOBr-ZtRbdM3Q" name="execute"/>
     <ownedOperation xmi:id="_C90vKttIEeOBr-ZtRbdM3Q" name="clearFailedTasks"/>
-    <ownedOperation xmi:id="_C90vK9tIEeOBr-ZtRbdM3Q" name="callbackDoneTasks" visibility="public"/>
     <ownedOperation xmi:id="_C90vLNtIEeOBr-ZtRbdM3Q" name="callbackStagedTasks"/>
-    <ownedOperation xmi:id="_C90vLdtIEeOBr-ZtRbdM3Q" name="__performCallback" visibility="private"/>
     <ownedOperation xmi:id="_C90vMNtIEeOBr-ZtRbdM3Q" name="removeUnlinkedReplicas"/>
-    <ownedOperation xmi:id="_C90vMdtIEeOBr-ZtRbdM3Q" name="clearReleasedTasks"/>
-    <ownedOperation xmi:id="_C90vMttIEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed"/>
+    <ownedOperation xmi:id="_C90vMttIEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed">
+      <ownedParameter xmi:id="_SAHzkAA9EeSI978P5wLkag" name="daysOld">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Collaboration" xmi:id="_C90vNNtIEeOBr-ZtRbdM3Q" name="Collaborations">
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_C90vNdtIEeOBr-ZtRbdM3Q" name="RequestPreparationSD">
@@ -882,26 +1182,149 @@
       <message xmi:id="_C91WyNtIEeOBr-ZtRbdM3Q" name="prepareNewReplicas" receiveEvent="_C91We9tIEeOBr-ZtRbdM3Q" sendEvent="_C91WettIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_C91WydtIEeOBr-ZtRbdM3Q" name="prepareNewReplicas" messageSort="reply" receiveEvent="_C91Ww9tIEeOBr-ZtRbdM3Q" sendEvent="_C91WwttIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_C91WyttIEeOBr-ZtRbdM3Q" name="__getNewReplicas" receiveEvent="_C91WfttIEeOBr-ZtRbdM3Q" sendEvent="_C91WfdtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91Wy9tIEeOBr-ZtRbdM3Q" name="__getNewReplicas" messageSort="reply" receiveEvent="_C91WhttIEeOBr-ZtRbdM3Q" sendEvent="_C91WhdtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91WzNtIEeOBr-ZtRbdM3Q" name="getCacheReplicas" receiveEvent="_C91WgdtIEeOBr-ZtRbdM3Q" sendEvent="_C91WgNtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_C91Wy9tIEeOBr-ZtRbdM3Q" name="__getNewReplicas" messageSort="reply" receiveEvent="_C91WhttIEeOBr-ZtRbdM3Q" sendEvent="_C91WhdtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_kSShcP-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_kSTIgP-PEeOAFvlXGtzbgg" source="Parameter" references="_gVFsEP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>res</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91WzNtIEeOBr-ZtRbdM3Q" name="getCacheReplicas" receiveEvent="_C91WgdtIEeOBr-ZtRbdM3Q" sendEvent="_C91WgNtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_OBy64P-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_OB8r4P-PEeOAFvlXGtzbgg" source="Parameter" references="_AfqLkP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;New&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_C91Wz9tIEeOBr-ZtRbdM3Q" name="getCacheReplicas" messageSort="reply" receiveEvent="_C91WhNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wg9tIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q">
         <eAnnotations xmi:id="_C91W0NtIEeOBr-ZtRbdM3Q" source="com.ibm.xtools.uml.core.displayoptions">
           <details xmi:id="_C91W0dtIEeOBr-ZtRbdM3Q" key="EmptyArgumentMessageOption" value="Display Argument as '&lt;parameter name> = -'"/>
         </eAnnotations>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_PGtUgP-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_PGt7kP-PEeOAFvlXGtzbgg" source="Parameter" references="_AfqLkP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>res</body>
+        </argument>
       </message>
-      <message xmi:id="_C91W1NtIEeOBr-ZtRbdM3Q" name="__getExistingFiles" receiveEvent="_C91WjNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wi9tIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W19tIEeOBr-ZtRbdM3Q" name="__getExistingFiles" messageSort="reply" receiveEvent="_C91WlNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wk9tIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W29tIEeOBr-ZtRbdM3Q" name="_exists" receiveEvent="_C91Wj9tIEeOBr-ZtRbdM3Q" sendEvent="_C91WjttIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_C91W1NtIEeOBr-ZtRbdM3Q" name="__getExistingFiles" receiveEvent="_C91WjNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wi9tIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_4vCScP-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_4vCScf-PEeOAFvlXGtzbgg" source="Parameter" references="_qCTYQP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicas.keys</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W19tIEeOBr-ZtRbdM3Q" name="__getExistingFiles" messageSort="reply" receiveEvent="_C91WlNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wk9tIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_52cmcP-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_52cmcf-PEeOAFvlXGtzbgg" source="Parameter" references="_qCTYQP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>exist</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_6YzFkP-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_6YzsoP-PEeOAFvlXGtzbgg" source="Parameter" references="_uXrdEP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminal</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_7AdigP-PEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_7Adigf-PEeOAFvlXGtzbgg" source="Parameter" references="_xWzgoP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>failed</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W29tIEeOBr-ZtRbdM3Q" name="_exists" receiveEvent="_C91Wj9tIEeOBr-ZtRbdM3Q" sendEvent="_C91WjttIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_yR5doP-UEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_yR6EsP-UEeOAFvlXGtzbgg" source="Parameter" references="_s_fI0P-UEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>lfns</body>
+        </argument>
+      </message>
       <message xmi:id="_C91W3dtIEeOBr-ZtRbdM3Q" name="_exists" messageSort="reply" receiveEvent="_C91WkttIEeOBr-ZtRbdM3Q" sendEvent="_C91WkdtIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W3ttIEeOBr-ZtRbdM3Q" name="__getFileSize" receiveEvent="_C91WmttIEeOBr-ZtRbdM3Q" sendEvent="_C91WmdtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W4dtIEeOBr-ZtRbdM3Q" name="__getFileSize" messageSort="reply" receiveEvent="_C91WottIEeOBr-ZtRbdM3Q" sendEvent="_C91WodtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W5dtIEeOBr-ZtRbdM3Q" name="getFileSize" receiveEvent="_C91WndtIEeOBr-ZtRbdM3Q" sendEvent="_C91WnNtIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W6NtIEeOBr-ZtRbdM3Q" name="getFileSize" messageSort="reply" receiveEvent="_C91WoNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wn9tIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W79tIEeOBr-ZtRbdM3Q" name="__getFileReplicas" receiveEvent="_C91WqNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wp9tIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W8ttIEeOBr-ZtRbdM3Q" name="__getFileReplicas" messageSort="reply" receiveEvent="_C91Wq9tIEeOBr-ZtRbdM3Q" sendEvent="_C91WqttIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C91W-dtIEeOBr-ZtRbdM3Q" name="updateReplicaFailure" receiveEvent="_C91WtdtIEeOBr-ZtRbdM3Q" sendEvent="_C91WtNtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_C91W3ttIEeOBr-ZtRbdM3Q" name="__getFileSize" receiveEvent="_C91WmttIEeOBr-ZtRbdM3Q" sendEvent="_C91WmdtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_NcXLMP-SEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_NcXyQP-SEeOAFvlXGtzbgg" source="Parameter" references="_Iit7sP-SEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>exist</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W4dtIEeOBr-ZtRbdM3Q" name="__getFileSize" messageSort="reply" receiveEvent="_C91WottIEeOBr-ZtRbdM3Q" sendEvent="_C91WodtIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_5qMy0P-SEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_5qMy0f-SEeOAFvlXGtzbgg" source="Parameter" references="_Iit7sP-SEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>fileSizes</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_6fQLgP-SEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_6fQykP-SEeOAFvlXGtzbgg" source="Parameter" references="_Pj_mEP-SEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminal</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_7Dyb8P-SEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_7DzDAP-SEeOAFvlXGtzbgg" source="Parameter" references="_UFFLoP-SEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>failed</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W5dtIEeOBr-ZtRbdM3Q" name="getFileSize" receiveEvent="_C91WndtIEeOBr-ZtRbdM3Q" sendEvent="_C91WnNtIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_-ASCQP-SEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_-ASCQf-SEeOAFvlXGtzbgg" source="Parameter" references="_CmpbUP-REeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>lfns</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W6NtIEeOBr-ZtRbdM3Q" name="getFileSize" messageSort="reply" receiveEvent="_C91WoNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wn9tIEeOBr-ZtRbdM3Q" connector="_C91WcdtIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_Jh0y0P-TEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_Jh0y0f-TEeOAFvlXGtzbgg" source="Parameter" references="_CmpbUP-REeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>fileSizes</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_KIct8P-TEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_KIdVAP-TEeOAFvlXGtzbgg" source="Parameter" references="__k2MUP-SEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminal</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_KtYnAP-TEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_KtZOEP-TEeOAFvlXGtzbgg" source="Parameter" references="_CmbG8P-TEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>failed</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W79tIEeOBr-ZtRbdM3Q" name="__getFileReplicas" receiveEvent="_C91WqNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wp9tIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="__MQ3wP-TEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="__MRe0P-TEeOAFvlXGtzbgg" source="Parameter" references="_j43YAP-TEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>fileSizes.keys</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W8ttIEeOBr-ZtRbdM3Q" name="__getFileReplicas" messageSort="reply" receiveEvent="_C91Wq9tIEeOBr-ZtRbdM3Q" sendEvent="_C91WqttIEeOBr-ZtRbdM3Q" connector="_C91Wa9tIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_BPD18P-UEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_BPEdAP-UEeOAFvlXGtzbgg" source="Parameter" references="_j43YAP-TEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicas</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_BtxyQP-UEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_BtyZUP-UEeOAFvlXGtzbgg" source="Parameter" references="_p9Vb4P-TEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>noReplicas</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_CSoy0P-UEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_CSpZ4P-UEeOAFvlXGtzbgg" source="Parameter" references="_sZul0P-TEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>failed</body>
+        </argument>
+      </message>
+      <message xmi:id="_C91W-dtIEeOBr-ZtRbdM3Q" name="updateReplicaFailure" receiveEvent="_C91WtdtIEeOBr-ZtRbdM3Q" sendEvent="_C91WtNtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_So5PkP-UEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_So52oP-UEeOAFvlXGtzbgg" source="Parameter" references="_HmwX0P-UEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminalReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_C919QNtIEeOBr-ZtRbdM3Q" name="updateReplicaFailure" messageSort="reply" receiveEvent="_C91WuNtIEeOBr-ZtRbdM3Q" sendEvent="_C91Wt9tIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_C919QdtIEeOBr-ZtRbdM3Q" name="updateReplicaInformation" receiveEvent="_C91WvttIEeOBr-ZtRbdM3Q" sendEvent="_C91WvdtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_C919QdtIEeOBr-ZtRbdM3Q" name="updateReplicaInformation" receiveEvent="_C91WvttIEeOBr-ZtRbdM3Q" sendEvent="_C91WvdtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_RKKnwP-UEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_RKLO0P-UEeOAFvlXGtzbgg" source="Parameter" references="_Nnvp4P-UEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicaMetadata</body>
+        </argument>
+      </message>
       <message xmi:id="_C919RNtIEeOBr-ZtRbdM3Q" name="updateReplicaInformation" messageSort="reply" receiveEvent="_C91WwdtIEeOBr-ZtRbdM3Q" sendEvent="_C91WwNtIEeOBr-ZtRbdM3Q" connector="_C91WbttIEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_CmzDAP7mEeOM5abBCfF44A" name="break" receiveEvent="_Cm0RIP7mEeOM5abBCfF44A" sendEvent="_CmzqEP7mEeOM5abBCfF44A" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_Cm2GUP7mEeOM5abBCfF44A" name="break" messageSort="reply" receiveEvent="_Cm2tYP7mEeOM5abBCfF44A" sendEvent="_Cm1fQP7mEeOM5abBCfF44A" connector="_C91Wa9tIEeOBr-ZtRbdM3Q"/>
@@ -1369,24 +1792,127 @@
       <message xmi:id="_QVbkUttaEeOBr-ZtRbdM3Q" name="monitorStageRequests" receiveEvent="_QVa9f9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9fttaEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_QVbkU9taEeOBr-ZtRbdM3Q" name="monitorStageRequests" messageSort="reply" receiveEvent="_QVbkTdtaEeOBr-ZtRbdM3Q" sendEvent="_QVbkTNtaEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_QVbkVNtaEeOBr-ZtRbdM3Q" name="__getStageSubmittedReplicas" receiveEvent="_QVa9gttaEeOBr-ZtRbdM3Q" sendEvent="_QVa9gdtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkVdtaEeOBr-ZtRbdM3Q" name="__getStageSubmittedReplicas" messageSort="reply" receiveEvent="_QVa9j9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9jttaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkWNtaEeOBr-ZtRbdM3Q" name="getCacheReplicas" receiveEvent="_QVa9hdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9hNtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkW9taEeOBr-ZtRbdM3Q" name="getCacheReplicas" messageSort="reply" receiveEvent="_QVa9iNtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9h9taEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkXttaEeOBr-ZtRbdM3Q" name="getStageRequests" receiveEvent="_QVa9ittaEeOBr-ZtRbdM3Q" sendEvent="_QVa9idtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkYdtaEeOBr-ZtRbdM3Q" name="getStageRequests" messageSort="reply" receiveEvent="_QVa9jdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9jNtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkZNtaEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" receiveEvent="_QVa9l9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9lttaEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_QVbkVdtaEeOBr-ZtRbdM3Q" name="__getStageSubmittedReplicas" messageSort="reply" receiveEvent="_QVa9j9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9jttaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_YJewwAA4EeSI978P5wLkag">
+          <eAnnotations xmi:id="_YJfX0AA4EeSI978P5wLkag" source="Parameter" references="_02tmsAA3EeSI978P5wLkag"/>
+          <language></language>
+          <body>res</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkWNtaEeOBr-ZtRbdM3Q" name="getCacheReplicas" receiveEvent="_QVa9hdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9hNtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_rU8yAAA2EeSI978P5wLkag">
+          <eAnnotations xmi:id="_rU9ZEAA2EeSI978P5wLkag" source="Parameter" references="_AfqLkP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;StageSubmitted&quot;</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkW9taEeOBr-ZtRbdM3Q" name="getCacheReplicas" messageSort="reply" receiveEvent="_QVa9iNtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9h9taEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_1Y8mgAA2EeSI978P5wLkag">
+          <eAnnotations xmi:id="_1Y9NkAA2EeSI978P5wLkag" source="Parameter" references="_AfqLkP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicaIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkXttaEeOBr-ZtRbdM3Q" name="getStageRequests" receiveEvent="_QVa9ittaEeOBr-ZtRbdM3Q" sendEvent="_QVa9idtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_mLzRcAA3EeSI978P5wLkag">
+          <eAnnotations xmi:id="_mLz4gAA3EeSI978P5wLkag" source="Parameter" references="_cMa3MAA3EeSI978P5wLkag"/>
+          <language></language>
+          <body>replicaIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkYdtaEeOBr-ZtRbdM3Q" name="getStageRequests" messageSort="reply" receiveEvent="_QVa9jdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9jNtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_npae8AA3EeSI978P5wLkag">
+          <eAnnotations xmi:id="_npbGAAA3EeSI978P5wLkag" source="Parameter" references="_cMa3MAA3EeSI978P5wLkag"/>
+          <language></language>
+          <body>stageRequests</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkZNtaEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" receiveEvent="_QVa9l9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9lttaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_lB-GIAA4EeSI978P5wLkag">
+          <eAnnotations xmi:id="_lB-tMAA4EeSI978P5wLkag" source="Parameter" references="_fsaWsAA4EeSI978P5wLkag"/>
+          <language></language>
+          <body>storageElement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_mwk9AAA4EeSI978P5wLkag">
+          <eAnnotations xmi:id="_mwlkEAA4EeSI978P5wLkag" source="Parameter" references="_h8bRgAA4EeSI978P5wLkag"/>
+          <language></language>
+          <body>seReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_QVbkadtaEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" messageSort="reply" receiveEvent="_QVa9tttaEeOBr-ZtRbdM3Q" sendEvent="_QVa9tdtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkattaEeOBr-ZtRbdM3Q" name="getFileMetadata" receiveEvent="_QVa9mttaEeOBr-ZtRbdM3Q" sendEvent="_QVa9mdtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkbdtaEeOBr-ZtRbdM3Q" name="getFileMetadata" messageSort="reply" receiveEvent="_QVa9ndtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9nNtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkbttaEeOBr-ZtRbdM3Q" name="updateReplicaFailure" receiveEvent="_QVa9o9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9ottaEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_QVbkattaEeOBr-ZtRbdM3Q" name="getFileMetadata" receiveEvent="_QVa9mttaEeOBr-ZtRbdM3Q" sendEvent="_QVa9mdtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_bw34wAA5EeSI978P5wLkag">
+          <eAnnotations xmi:id="_bw4f0AA5EeSI978P5wLkag" source="Parameter" references="_VmOUYAA5EeSI978P5wLkag"/>
+          <language></language>
+          <body>pfnRepIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkbdtaEeOBr-ZtRbdM3Q" name="getFileMetadata" messageSort="reply" receiveEvent="_QVa9ndtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9nNtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_sgmlcAA5EeSI978P5wLkag">
+          <eAnnotations xmi:id="_sgnMgAA5EeSI978P5wLkag" source="Parameter" references="_VmOUYAA5EeSI978P5wLkag"/>
+          <language></language>
+          <body>terminalReplicaIDs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_tmkvAAA5EeSI978P5wLkag">
+          <eAnnotations xmi:id="_tmlWEAA5EeSI978P5wLkag" source="Parameter" references="_XmMBAAA5EeSI978P5wLkag"/>
+          <language></language>
+          <body>stagedReplicas</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_uhW8QAA5EeSI978P5wLkag">
+          <eAnnotations xmi:id="_uhW8QQA5EeSI978P5wLkag" source="Parameter" references="_jmPSgAA5EeSI978P5wLkag"/>
+          <language></language>
+          <body>oldRequests</body>
+        </argument>
+      </message>
+      <message xmi:id="_QVbkbttaEeOBr-ZtRbdM3Q" name="updateReplicaFailure" receiveEvent="_QVa9o9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9ottaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_yoJLcAA5EeSI978P5wLkag">
+          <eAnnotations xmi:id="_yoJygAA5EeSI978P5wLkag" source="Parameter" references="_HmwX0P-UEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminalReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_QVbkcdtaEeOBr-ZtRbdM3Q" name="updateReplicaFailure" messageSort="reply" receiveEvent="_QVa9pttaEeOBr-ZtRbdM3Q" sendEvent="_QVa9pdtaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkcttaEeOBr-ZtRbdM3Q" name="setStageComplete" receiveEvent="_QVa9rNtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9q9taEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_QVbkcttaEeOBr-ZtRbdM3Q" name="setStageComplete" receiveEvent="_QVa9rNtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9q9taEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_NRUpgAA6EeSI978P5wLkag">
+          <eAnnotations xmi:id="_NRVQkAA6EeSI978P5wLkag" source="Parameter" references="_4PIpIAA5EeSI978P5wLkag"/>
+          <language></language>
+          <body>stagedReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_QVbkddtaEeOBr-ZtRbdM3Q" name="setStageComplete" messageSort="reply" receiveEvent="_QVa9r9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9rttaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkdttaEeOBr-ZtRbdM3Q" name="updateReplicaStatus" receiveEvent="_QVa9sdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9sNtaEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_QVbkdttaEeOBr-ZtRbdM3Q" name="updateReplicaStatus" receiveEvent="_QVa9sdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9sNtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_Wocw8AA6EeSI978P5wLkag">
+          <eAnnotations xmi:id="_WodYAAA6EeSI978P5wLkag" source="Parameter" references="_OloU0P-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;Staged&quot;</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_XWBBkAA6EeSI978P5wLkag">
+          <eAnnotations xmi:id="_XWBooAA6EeSI978P5wLkag" source="Parameter" references="_RtlkQP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>stagedReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_QVbke9taEeOBr-ZtRbdM3Q" name="updateReplicaStatus" messageSort="reply" receiveEvent="_QVa9tNtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9s9taEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkfNtaEeOBr-ZtRbdM3Q" name="__wakeupOldRequests" receiveEvent="_QVbkQ9taEeOBr-ZtRbdM3Q" sendEvent="_QVbkQttaEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_QVbkfNtaEeOBr-ZtRbdM3Q" name="__wakeupOldRequests" receiveEvent="_QVbkQ9taEeOBr-ZtRbdM3Q" sendEvent="_QVbkQttaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_iDDMAAA6EeSI978P5wLkag">
+          <eAnnotations xmi:id="_iDDzEAA6EeSI978P5wLkag" source="Parameter" references="_e7FVgAA6EeSI978P5wLkag"/>
+          <language></language>
+          <body>oldRequests</body>
+        </argument>
+      </message>
       <message xmi:id="_QVbkf9taEeOBr-ZtRbdM3Q" name="__wakeupOldRequests" messageSort="reply" receiveEvent="_QVbkS9taEeOBr-ZtRbdM3Q" sendEvent="_QVbkSttaEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_QVbkgNtaEeOBr-ZtRbdM3Q" name="wakeupOldRequests" receiveEvent="_QVbkRttaEeOBr-ZtRbdM3Q" sendEvent="_QVbkRdtaEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_QVbkgNtaEeOBr-ZtRbdM3Q" name="wakeupOldRequests" receiveEvent="_QVbkRttaEeOBr-ZtRbdM3Q" sendEvent="_QVbkRdtaEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_wfeZUAA6EeSI978P5wLkag">
+          <eAnnotations xmi:id="_wffAYAA6EeSI978P5wLkag" source="Parameter" references="_qQYZ0AA6EeSI978P5wLkag"/>
+          <language></language>
+          <body>oldRequests</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_xFf3gAA6EeSI978P5wLkag">
+          <eAnnotations xmi:id="_xFgekAA6EeSI978P5wLkag" source="Parameter" references="_seAH8AA6EeSI978P5wLkag"/>
+          <language></language>
+          <body>retryIntervalHour</body>
+        </argument>
+      </message>
       <message xmi:id="_QVbkhdtaEeOBr-ZtRbdM3Q" name="wakeupOldRequests" messageSort="reply" receiveEvent="_QVbkSdtaEeOBr-ZtRbdM3Q" sendEvent="_QVbkSNtaEeOBr-ZtRbdM3Q"/>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_PTPDQNthEeOBr-ZtRbdM3Q" name="RequestFinalizationSD">
@@ -1851,24 +2377,72 @@
       <message xmi:id="_PTQ4zdthEeOBr-ZtRbdM3Q" name="execute" messageSort="reply" receiveEvent="_PTQ4y9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4ytthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTQ4ztthEeOBr-ZtRbdM3Q" name="clearFailedTasks" receiveEvent="_PTQ4eNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4d9thEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTQ4z9thEeOBr-ZtRbdM3Q" name="clearFailedTasks" messageSort="reply" receiveEvent="_PTQ4ldthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4lNthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTQ40NthEeOBr-ZtRbdM3Q" name="getTasksWithStatus" receiveEvent="_PTQ4e9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4etthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTQ409thEeOBr-ZtRbdM3Q" name="getTasksWithStatus" messageSort="reply" receiveEvent="_PTQ4ftthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4fdthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTQ44tthEeOBr-ZtRbdM3Q" name="removeTasks" receiveEvent="_PTQ4kNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4j9thEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_PTQ40NthEeOBr-ZtRbdM3Q" name="getTasksWithStatus" receiveEvent="_PTQ4e9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4etthEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_oIPMIAA7EeSI978P5wLkag">
+          <eAnnotations xmi:id="_oIPzMAA7EeSI978P5wLkag" source="Parameter" references="_fRLr4AA7EeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Failed&quot;</body>
+        </argument>
+      </message>
+      <message xmi:id="_PTQ409thEeOBr-ZtRbdM3Q" name="getTasksWithStatus" messageSort="reply" receiveEvent="_PTQ4ftthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4fdthEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_vTlYgAA7EeSI978P5wLkag">
+          <eAnnotations xmi:id="_vTl_kAA7EeSI978P5wLkag" source="Parameter" references="_fRLr4AA7EeSI978P5wLkag"/>
+          <language></language>
+          <body>failedTasks</body>
+        </argument>
+      </message>
+      <message xmi:id="_PTQ44tthEeOBr-ZtRbdM3Q" name="removeTasks" receiveEvent="_PTQ4kNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4j9thEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_K25jkAA8EeSI978P5wLkag">
+          <eAnnotations xmi:id="_K25jkQA8EeSI978P5wLkag" source="Parameter" references="_IF5bkAA8EeSI978P5wLkag"/>
+          <language></language>
+          <body>failedTasks</body>
+        </argument>
+      </message>
       <message xmi:id="_PTQ45dthEeOBr-ZtRbdM3Q" name="removeTasks" messageSort="reply" receiveEvent="_PTQ4k9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4ktthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTQ45tthEeOBr-ZtRbdM3Q" name="callbackStagedTasks" receiveEvent="_PTQ4l9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4ltthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTQ459thEeOBr-ZtRbdM3Q" name="callbackStagedTasks" messageSort="reply" receiveEvent="_PTQ4tdthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4tNthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTQ49NthEeOBr-ZtRbdM3Q" name="removeTasks" receiveEvent="_PTQ4sNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4r9thEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_PTQ49NthEeOBr-ZtRbdM3Q" name="removeTasks" receiveEvent="_PTQ4sNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4r9thEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_L1UeMAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_L1VFQAA9EeSI978P5wLkag" source="Parameter" references="_IF5bkAA8EeSI978P5wLkag"/>
+          <language></language>
+          <body>stagedTasks</body>
+        </argument>
+      </message>
       <message xmi:id="_PTRfgtthEeOBr-ZtRbdM3Q" name="removeTasks" messageSort="reply" receiveEvent="_PTQ4s9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4stthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTRfg9thEeOBr-ZtRbdM3Q" name="removeUnlinkedReplicas" receiveEvent="_PTQ4t9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4ttthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTRfhNthEeOBr-ZtRbdM3Q" name="removeUnlinkedReplicas" messageSort="reply" receiveEvent="_PTQ4v9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4vtthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTRfhdthEeOBr-ZtRbdM3Q" name="removeUnlinkedReplicas" receiveEvent="_PTQ4utthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4udthEeOBr-ZtRbdM3Q"/>
       <message xmi:id="_PTRfhtthEeOBr-ZtRbdM3Q" name="removeUnlinkedReplicas" messageSort="reply" receiveEvent="_PTQ4vdthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4vNthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTRfh9thEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed" receiveEvent="_PTQ4wdthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4wNthEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_PTRfh9thEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed" receiveEvent="_PTQ4wdthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4wNthEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_V4mhAAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_V4nIEAA9EeSI978P5wLkag" source="Parameter" references="_SAHzkAA9EeSI978P5wLkag"/>
+          <language></language>
+          <body>3</body>
+        </argument>
+      </message>
       <message xmi:id="_PTRfitthEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed" messageSort="reply" receiveEvent="_PTQ4ydthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4yNthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTRfi9thEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed" receiveEvent="_PTQ4xNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4w9thEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_PTRfi9thEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed" receiveEvent="_PTQ4xNthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4w9thEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_eYdpQAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_eYdpQQA9EeSI978P5wLkag" source="Parameter" references="_bjFXkAA9EeSI978P5wLkag"/>
+          <language></language>
+          <body>3</body>
+        </argument>
+      </message>
       <message xmi:id="_PTRfjtthEeOBr-ZtRbdM3Q" name="setOldTasksAsFailed" messageSort="reply" receiveEvent="_PTQ4x9thEeOBr-ZtRbdM3Q" sendEvent="_PTQ4xtthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTRfj9thEeOBr-ZtRbdM3Q" name="getTasksWithStatus" receiveEvent="_PTQ4mtthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4mdthEeOBr-ZtRbdM3Q"/>
-      <message xmi:id="_PTRfktthEeOBr-ZtRbdM3Q" name="getTasksWithStatus" messageSort="reply" receiveEvent="_PTQ4ndthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4nNthEeOBr-ZtRbdM3Q"/>
+      <message xmi:id="_PTRfj9thEeOBr-ZtRbdM3Q" name="getTasksWithStatus" receiveEvent="_PTQ4mtthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4mdthEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_COkmYAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_COlNcAA9EeSI978P5wLkag" source="Parameter" references="_fRLr4AA7EeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Staged&quot;</body>
+        </argument>
+      </message>
+      <message xmi:id="_PTRfktthEeOBr-ZtRbdM3Q" name="getTasksWithStatus" messageSort="reply" receiveEvent="_PTQ4ndthEeOBr-ZtRbdM3Q" sendEvent="_PTQ4nNthEeOBr-ZtRbdM3Q">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_FMo6AAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_FMphEAA9EeSI978P5wLkag" source="Parameter" references="_fRLr4AA7EeSI978P5wLkag"/>
+          <language></language>
+          <body>stagedTasks</body>
+        </argument>
+      </message>
       <message xmi:id="_g1Wh8P8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_g1PNMP8KEeOAFvlXGtzbgg" sendEvent="_g1XJAP8KEeOAFvlXGtzbgg"/>
       <message xmi:id="_g1XJAf8KEeOAFvlXGtzbgg" name="updateJobFromStager" messageSort="reply" receiveEvent="_g1XwEP8KEeOAFvlXGtzbgg" sendEvent="_g1XJAv8KEeOAFvlXGtzbgg"/>
       <message xmi:id="_wV43oP8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_wVyxAP8KEeOAFvlXGtzbgg" sendEvent="_wV43of8KEeOAFvlXGtzbgg"/>
@@ -2058,13 +2632,63 @@
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U0Z4kv8KEeOAFvlXGtzbgg" covered="_Z0rvcdtpEeOBr-ZtRbdM3Q" event="_C99SKNtIEeOBr-ZtRbdM3Q" message="_U0afoP8KEeOAFvlXGtzbgg"/>
       <formalGate xmi:id="_U0NEQP8KEeOAFvlXGtzbgg" message="_U0ZRgP8KEeOAFvlXGtzbgg"/>
       <formalGate xmi:id="_U0afof8KEeOAFvlXGtzbgg" message="_U0afoP8KEeOAFvlXGtzbgg"/>
-      <message xmi:id="_Mz9vINxLEeO5dZd1SGUD5w" name="getJobAttributes" receiveEvent="_Mz-9QNxLEeO5dZd1SGUD5w" sendEvent="_Mz-WMNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w"/>
-      <message xmi:id="_M0BZgNxLEeO5dZd1SGUD5w" name="getJobAttributes" messageSort="reply" receiveEvent="_M0BZgdxLEeO5dZd1SGUD5w" sendEvent="_M0AycNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w"/>
-      <message xmi:id="_UVNTANxLEeO5dZd1SGUD5w" name="setJobStatus" receiveEvent="_UVPIMNxLEeO5dZd1SGUD5w" sendEvent="_UVN6ENxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w"/>
+      <message xmi:id="_Mz9vINxLEeO5dZd1SGUD5w" name="getJobAttributes" receiveEvent="_Mz-9QNxLEeO5dZd1SGUD5w" sendEvent="_Mz-WMNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_vakNcAA_EeSI978P5wLkag">
+          <eAnnotations xmi:id="_vakNcQA_EeSI978P5wLkag" source="Parameter" references="_b8g5UAA_EeSI978P5wLkag"/>
+          <language></language>
+          <body>jobID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_wC7N8AA_EeSI978P5wLkag">
+          <eAnnotations xmi:id="_wC71AAA_EeSI978P5wLkag" source="Parameter" references="_d-LPEAA_EeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Status&quot;</body>
+        </argument>
+      </message>
+      <message xmi:id="_M0BZgNxLEeO5dZd1SGUD5w" name="getJobAttributes" messageSort="reply" receiveEvent="_M0BZgdxLEeO5dZd1SGUD5w" sendEvent="_M0AycNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_xRUTsAA_EeSI978P5wLkag">
+          <eAnnotations xmi:id="_xRU6wAA_EeSI978P5wLkag" source="Parameter" references="_b8g5UAA_EeSI978P5wLkag"/>
+          <language></language>
+          <body>status</body>
+        </argument>
+      </message>
+      <message xmi:id="_UVNTANxLEeO5dZd1SGUD5w" name="setJobStatus" receiveEvent="_UVPIMNxLEeO5dZd1SGUD5w" sendEvent="_UVN6ENxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_Zy320ABAEeSI978P5wLkag">
+          <eAnnotations xmi:id="_Zy4d4ABAEeSI978P5wLkag" source="Parameter" references="_RbacoABAEeSI978P5wLkag"/>
+          <language></language>
+          <body>jobID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_aU3JkABAEeSI978P5wLkag">
+          <eAnnotations xmi:id="_aU3woABAEeSI978P5wLkag" source="Parameter" references="_S9NmkABAEeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Checking&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_UVQ9YNxLEeO5dZd1SGUD5w" name="setJobStatus" messageSort="reply" receiveEvent="_UVRkcNxLEeO5dZd1SGUD5w" sendEvent="_UVQWUNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w"/>
-      <message xmi:id="_W8YJkNxLEeO5dZd1SGUD5w" name="setJobStatus" receiveEvent="_W8al0NxLEeO5dZd1SGUD5w" sendEvent="_W8ZXsNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w"/>
+      <message xmi:id="_W8YJkNxLEeO5dZd1SGUD5w" name="setJobStatus" receiveEvent="_W8al0NxLEeO5dZd1SGUD5w" sendEvent="_W8ZXsNxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_crJrgABAEeSI978P5wLkag">
+          <eAnnotations xmi:id="_crK5oABAEeSI978P5wLkag" source="Parameter" references="_RbacoABAEeSI978P5wLkag"/>
+          <language></language>
+          <body>jobID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_dnqXEABAEeSI978P5wLkag">
+          <eAnnotations xmi:id="_dnq-IABAEeSI978P5wLkag" source="Parameter" references="_S9NmkABAEeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Failed&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_W8cbAdxLEeO5dZd1SGUD5w" name="setJobStatus" messageSort="reply" receiveEvent="_W8dCENxLEeO5dZd1SGUD5w" sendEvent="_W8cbANxLEeO5dZd1SGUD5w" connector="_M0BZgtxLEeO5dZd1SGUD5w"/>
-      <message xmi:id="_U0ZRgP8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_U0Z4kP8KEeOAFvlXGtzbgg" sendEvent="_U0NEQP8KEeOAFvlXGtzbgg"/>
+      <message xmi:id="_U0ZRgP8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_U0Z4kP8KEeOAFvlXGtzbgg" sendEvent="_U0NEQP8KEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_21c8kAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_21djoAA9EeSI978P5wLkag" source="Parameter" references="_xoKYUAA9EeSI978P5wLkag"/>
+          <language></language>
+          <body>jobID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_3Yn7EAA9EeSI978P5wLkag">
+          <eAnnotations xmi:id="_3YoiIAA9EeSI978P5wLkag" source="Parameter" references="_zGCrkAA9EeSI978P5wLkag"/>
+          <language></language>
+          <body>status</body>
+        </argument>
+      </message>
       <message xmi:id="_U0afoP8KEeOAFvlXGtzbgg" name="updateJobFromStager" messageSort="reply" receiveEvent="_U0afof8KEeOAFvlXGtzbgg" sendEvent="_U0Z4kv8KEeOAFvlXGtzbgg"/>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_HrAQINttEeOBr-ZtRbdM3Q" name="setRequestSD">
@@ -2148,7 +2772,7 @@
                             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lg1dQdxmEeO5dZd1SGUD5w"/>
                           </children>
                         </children>
-                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lg0PIdxmEeO5dZd1SGUD5w" y="211" width="10661" height="10582"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lg0PIdxmEeO5dZd1SGUD5w" x="-104" y="449" width="10661" height="12171"/>
                       </children>
                     </children>
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UY6TAdxmEeO5dZd1SGUD5w" y="752" width="12433" height="12241"/>
@@ -2356,7 +2980,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sEohcdxmEeO5dZd1SGUD5w" y="-317"/>
             </children>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sEn6YdxmEeO5dZd1SGUD5w" points="[0, 0, 0, -28]$[0, 28, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sEq9sNxmEeO5dZd1SGUD5w" id="5640:-77"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sEq9sNxmEeO5dZd1SGUD5w" id="5640:-715"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sEq9sdxmEeO5dZd1SGUD5w" id="5792:740"/>
           </edges>
           <edges xmi:type="umlnotation:UMLConnector" xmi:id="_sEuoENxmEeO5dZd1SGUD5w" element="_sD-aINxmEeO5dZd1SGUD5w" source="_HrAQLNttEeOBr-ZtRbdM3Q" target="_HrAQLNttEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
@@ -2409,15 +3033,15 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yzb7wtxmEeO5dZd1SGUD5w" id="6157:1322"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yzb7w9xmEeO5dZd1SGUD5w" id="6158:264"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_uuTYwNxuEeO5dZd1SGUD5w" element="_uteSUNxuEeO5dZd1SGUD5w" source="_HrAQLNttEeOBr-ZtRbdM3Q" target="_HrAQLNttEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_uuT_0dxuEeO5dZd1SGUD5w" type="MessageNameLabel">
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_uuT_09xuEeO5dZd1SGUD5w" type="Stereotype"/>
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_uuUm4NxuEeO5dZd1SGUD5w" type="Name"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uuT_0txuEeO5dZd1SGUD5w" y="-317"/>
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_IUK1MABJEeSI978P5wLkag" element="_IR7ZgABJEeSI978P5wLkag" source="_HrAQLNttEeOBr-ZtRbdM3Q" target="_HrAQLNttEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_IULcQABJEeSI978P5wLkag" type="MessageNameLabel">
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_IULcQgBJEeSI978P5wLkag" type="Stereotype"/>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_IUMDUABJEeSI978P5wLkag" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IULcQQBJEeSI978P5wLkag" y="-317"/>
             </children>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uuT_0NxuEeO5dZd1SGUD5w" points="[0, 0, 0, -10]$[0, 10, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uuXDINxuEeO5dZd1SGUD5w" id="6501:-69"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uuXDIdxuEeO5dZd1SGUD5w" id="6563:265"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IUK1MQBJEeSI978P5wLkag" points="[0, 0, 0, -20]$[0, 20, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IUUmMABJEeSI978P5wLkag" id="664:63"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IUUmMQBJEeSI978P5wLkag" id="732:529"/>
           </edges>
         </contents>
       </eAnnotations>
@@ -2438,7 +3062,7 @@
         <end xmi:id="_N1_sgNxOEeO5dZd1SGUD5w" role="_C98rIdtIEeOBr-ZtRbdM3Q"/>
       </ownedConnector>
       <lifeline xmi:id="_HrBedtttEeOBr-ZtRbdM3Q" name="jobScheduling" represents="_C98rIdtIEeOBr-ZtRbdM3Q" coveredBy="_hhOL4NxMEeO5dZd1SGUD5w _hhOy8NxMEeO5dZd1SGUD5w _hhPaANxMEeO5dZd1SGUD5w _hhQBENxMEeO5dZd1SGUD5w _hhRPMNxMEeO5dZd1SGUD5w _jmM7YNxMEeO5dZd1SGUD5w _jmP-sNxMEeO5dZd1SGUD5w _xUldUNxUEeO5dZd1SGUD5w _xUnSgtxUEeO5dZd1SGUD5w"/>
-      <lifeline xmi:id="_HrBed9ttEeOBr-ZtRbdM3Q" name="storageManagementDB" represents="_C98rGttIEeOBr-ZtRbdM3Q" coveredBy="_jmNicNxMEeO5dZd1SGUD5w _jmOJgNxMEeO5dZd1SGUD5w _jmOwkNxMEeO5dZd1SGUD5w _ukmioNxMEeO5dZd1SGUD5w _ukmiodxMEeO5dZd1SGUD5w _uknJsNxMEeO5dZd1SGUD5w _uknJsdxMEeO5dZd1SGUD5w _uknJs9xMEeO5dZd1SGUD5w _7UbEMNxMEeO5dZd1SGUD5w _ARNHQNxNEeO5dZd1SGUD5w _ARNuUNxNEeO5dZd1SGUD5w _AROVYNxNEeO5dZd1SGUD5w _ARO8cNxNEeO5dZd1SGUD5w _ARQKkNxNEeO5dZd1SGUD5w _JvveQNxNEeO5dZd1SGUD5w _JvwFUNxNEeO5dZd1SGUD5w _JvwsYNxNEeO5dZd1SGUD5w _JvxTcNxNEeO5dZd1SGUD5w _JvyhkNxNEeO5dZd1SGUD5w _N5ErINxNEeO5dZd1SGUD5w _PqFVwNxNEeO5dZd1SGUD5w _PqF80NxNEeO5dZd1SGUD5w _PqGj4NxNEeO5dZd1SGUD5w _PqHK8NxNEeO5dZd1SGUD5w _PqHyAdxNEeO5dZd1SGUD5w _RvC3INxNEeO5dZd1SGUD5w _TvYXMNxNEeO5dZd1SGUD5w _TvY-QNxNEeO5dZd1SGUD5w _TvZlUNxNEeO5dZd1SGUD5w _TvaMYNxNEeO5dZd1SGUD5w _TvbagNxNEeO5dZd1SGUD5w _UYrpgNxmEeO5dZd1SGUD5w _lgoB4NxmEeO5dZd1SGUD5w _sD794NxmEeO5dZd1SGUD5w _sD8k8NxmEeO5dZd1SGUD5w _sD9MANxmEeO5dZd1SGUD5w _sD9zENxmEeO5dZd1SGUD5w _sD_BMNxmEeO5dZd1SGUD5w _t_UFcNxmEeO5dZd1SGUD5w _t_UFcdxmEeO5dZd1SGUD5w _t_UsgNxmEeO5dZd1SGUD5w _t_VTkNxmEeO5dZd1SGUD5w _t_WhsNxmEeO5dZd1SGUD5w _yyPo8NxmEeO5dZd1SGUD5w _yyQQANxmEeO5dZd1SGUD5w _yyQ3ENxmEeO5dZd1SGUD5w _yyReINxmEeO5dZd1SGUD5w _yySFMdxmEeO5dZd1SGUD5w _utfgcNxuEeO5dZd1SGUD5w _utgHgNxuEeO5dZd1SGUD5w _utgHgdxuEeO5dZd1SGUD5w _utgHgtxuEeO5dZd1SGUD5w _utgukNxuEeO5dZd1SGUD5w"/>
+      <lifeline xmi:id="_HrBed9ttEeOBr-ZtRbdM3Q" name="storageManagementDB" represents="_C98rGttIEeOBr-ZtRbdM3Q" coveredBy="_jmNicNxMEeO5dZd1SGUD5w _jmOJgNxMEeO5dZd1SGUD5w _jmOwkNxMEeO5dZd1SGUD5w _ukmioNxMEeO5dZd1SGUD5w _ukmiodxMEeO5dZd1SGUD5w _uknJsNxMEeO5dZd1SGUD5w _uknJsdxMEeO5dZd1SGUD5w _uknJs9xMEeO5dZd1SGUD5w _7UbEMNxMEeO5dZd1SGUD5w _ARNHQNxNEeO5dZd1SGUD5w _ARNuUNxNEeO5dZd1SGUD5w _AROVYNxNEeO5dZd1SGUD5w _ARO8cNxNEeO5dZd1SGUD5w _ARQKkNxNEeO5dZd1SGUD5w _JvveQNxNEeO5dZd1SGUD5w _JvwFUNxNEeO5dZd1SGUD5w _JvwsYNxNEeO5dZd1SGUD5w _JvxTcNxNEeO5dZd1SGUD5w _JvyhkNxNEeO5dZd1SGUD5w _N5ErINxNEeO5dZd1SGUD5w _PqFVwNxNEeO5dZd1SGUD5w _PqF80NxNEeO5dZd1SGUD5w _PqGj4NxNEeO5dZd1SGUD5w _PqHK8NxNEeO5dZd1SGUD5w _PqHyAdxNEeO5dZd1SGUD5w _RvC3INxNEeO5dZd1SGUD5w _TvYXMNxNEeO5dZd1SGUD5w _TvY-QNxNEeO5dZd1SGUD5w _TvZlUNxNEeO5dZd1SGUD5w _TvaMYNxNEeO5dZd1SGUD5w _TvbagNxNEeO5dZd1SGUD5w _UYrpgNxmEeO5dZd1SGUD5w _lgoB4NxmEeO5dZd1SGUD5w _sD794NxmEeO5dZd1SGUD5w _sD8k8NxmEeO5dZd1SGUD5w _sD9MANxmEeO5dZd1SGUD5w _sD9zENxmEeO5dZd1SGUD5w _sD_BMNxmEeO5dZd1SGUD5w _t_UFcNxmEeO5dZd1SGUD5w _t_UFcdxmEeO5dZd1SGUD5w _t_UsgNxmEeO5dZd1SGUD5w _t_VTkNxmEeO5dZd1SGUD5w _t_WhsNxmEeO5dZd1SGUD5w _yyPo8NxmEeO5dZd1SGUD5w _yyQQANxmEeO5dZd1SGUD5w _yyQ3ENxmEeO5dZd1SGUD5w _yyReINxmEeO5dZd1SGUD5w _yySFMdxmEeO5dZd1SGUD5w _IR8AkABJEeSI978P5wLkag _IR8AkQBJEeSI978P5wLkag _IR8noABJEeSI978P5wLkag _IR8noQBJEeSI978P5wLkag _IR9OsQBJEeSI978P5wLkag"/>
       <lifeline xmi:id="_HrBeeNttEeOBr-ZtRbdM3Q" name="job" represents="_C98rI9tIEeOBr-ZtRbdM3Q" coveredBy="_xUmEYNxUEeO5dZd1SGUD5w _xUmrcNxUEeO5dZd1SGUD5w _xUnSgNxUEeO5dZd1SGUD5w"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hhOL4NxMEeO5dZd1SGUD5w" covered="_HrBedtttEeOBr-ZtRbdM3Q" event="_i0Yc4NxMEeO5dZd1SGUD5w" message="_hhNk0NxMEeO5dZd1SGUD5w"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hhOy8NxMEeO5dZd1SGUD5w" covered="_HrBedtttEeOBr-ZtRbdM3Q" event="_i0Yc4dxMEeO5dZd1SGUD5w" message="_hhNk0NxMEeO5dZd1SGUD5w"/>
@@ -2476,11 +3100,11 @@
                 <minint xmi:type="uml:LiteralInteger" xmi:id="_UYv68NxmEeO5dZd1SGUD5w"/>
                 <maxint xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UYv68dxmEeO5dZd1SGUD5w" value="*"/>
               </guard>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_utfgcNxuEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYmS8NxuEeO5dZd1SGUD5w" message="_uteSUNxuEeO5dZd1SGUD5w"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_utgHgNxuEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYm6ANxuEeO5dZd1SGUD5w" message="_uteSUNxuEeO5dZd1SGUD5w"/>
-              <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_utgHgdxuEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" start="_utgHgNxuEeO5dZd1SGUD5w" finish="_utgHgtxuEeO5dZd1SGUD5w"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_utgHgtxuEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYmS8NxuEeO5dZd1SGUD5w" message="_utgHg9xuEeO5dZd1SGUD5w"/>
-              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_utgukNxuEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYm6ANxuEeO5dZd1SGUD5w" message="_utgHg9xuEeO5dZd1SGUD5w"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IR8AkABJEeSI978P5wLkag" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYmS8NxuEeO5dZd1SGUD5w" message="_IR7ZgABJEeSI978P5wLkag"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IR8AkQBJEeSI978P5wLkag" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYm6ANxuEeO5dZd1SGUD5w" message="_IR7ZgABJEeSI978P5wLkag"/>
+              <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_IR8noABJEeSI978P5wLkag" covered="_HrBed9ttEeOBr-ZtRbdM3Q" start="_IR8AkQBJEeSI978P5wLkag" finish="_IR8noQBJEeSI978P5wLkag"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IR8noQBJEeSI978P5wLkag" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYmS8NxuEeO5dZd1SGUD5w" message="_IR9OsABJEeSI978P5wLkag"/>
+              <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IR9OsQBJEeSI978P5wLkag" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_vYm6ANxuEeO5dZd1SGUD5w" message="_IR9OsABJEeSI978P5wLkag"/>
               <fragment xmi:type="uml:CombinedFragment" xmi:id="_lgoB4NxmEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" interactionOperator="alt">
                 <operand xmi:id="_lgoo8NxmEeO5dZd1SGUD5w">
                   <guard xmi:id="_lgp3ENxmEeO5dZd1SGUD5w">
@@ -2499,7 +3123,7 @@
                   <guard xmi:id="_lgsTUNxmEeO5dZd1SGUD5w">
                     <specification xmi:type="uml:OpaqueExpression" xmi:id="_lgs6YNxmEeO5dZd1SGUD5w">
                       <language></language>
-                      <body>lfn in existingReplicas</body>
+                      <body>else</body>
                     </specification>
                   </guard>
                   <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t_UFcNxmEeO5dZd1SGUD5w" covered="_HrBed9ttEeOBr-ZtRbdM3Q" event="_C99SQdtIEeOBr-ZtRbdM3Q" message="_t_S3UNxmEeO5dZd1SGUD5w"/>
@@ -2564,28 +3188,162 @@
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hhRPMNxMEeO5dZd1SGUD5w" covered="_HrBedtttEeOBr-ZtRbdM3Q" event="_i0Yc4dxMEeO5dZd1SGUD5w" message="_hhQBEdxMEeO5dZd1SGUD5w"/>
       <message xmi:id="_hhNk0NxMEeO5dZd1SGUD5w" name="__requestStaging" receiveEvent="_hhOy8NxMEeO5dZd1SGUD5w" sendEvent="_hhOL4NxMEeO5dZd1SGUD5w" connector="_hhRPMdxMEeO5dZd1SGUD5w"/>
       <message xmi:id="_hhQBEdxMEeO5dZd1SGUD5w" name="__requestStaging" messageSort="reply" receiveEvent="_hhRPMNxMEeO5dZd1SGUD5w" sendEvent="_hhQBENxMEeO5dZd1SGUD5w" connector="_hhRPMdxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_jmMUUNxMEeO5dZd1SGUD5w" name="setRequest" receiveEvent="_jmNicNxMEeO5dZd1SGUD5w" sendEvent="_jmM7YNxMEeO5dZd1SGUD5w" connector="_jmP-sdxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_jmMUUNxMEeO5dZd1SGUD5w" name="setRequest" receiveEvent="_jmNicNxMEeO5dZd1SGUD5w" sendEvent="_jmM7YNxMEeO5dZd1SGUD5w" connector="_jmP-sdxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_8J_JkABDEeSI978P5wLkag">
+          <eAnnotations xmi:id="_8J_woABDEeSI978P5wLkag" source="Parameter" references="_QNSVQABDEeSI978P5wLkag"/>
+          <language></language>
+          <body>stageLFNs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_9RuNsABDEeSI978P5wLkag">
+          <eAnnotations xmi:id="_9Ru0wABDEeSI978P5wLkag" source="Parameter" references="_SzydcABDEeSI978P5wLkag"/>
+          <language></language>
+          <body>WorkloadManagement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="__K25kABDEeSI978P5wLkag">
+          <eAnnotations xmi:id="__K3goABDEeSI978P5wLkag" source="Parameter" references="_VPmYkABDEeSI978P5wLkag"/>
+          <language></language>
+          <body>updateJobFromStager</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_AcWWoABEEeSI978P5wLkag">
+          <eAnnotations xmi:id="_AcW9sABEEeSI978P5wLkag" source="Parameter" references="_Xef5EABDEeSI978P5wLkag"/>
+          <language></language>
+          <body>jobState.jid</body>
+        </argument>
+      </message>
       <message xmi:id="_jmPXoNxMEeO5dZd1SGUD5w" name="setRequest" messageSort="reply" receiveEvent="_jmP-sNxMEeO5dZd1SGUD5w" sendEvent="_jmOwkNxMEeO5dZd1SGUD5w" connector="_jmP-sdxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_ukl7kNxMEeO5dZd1SGUD5w" name="_createTask" receiveEvent="_ukmiodxMEeO5dZd1SGUD5w" sendEvent="_ukmioNxMEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_uknJstxMEeO5dZd1SGUD5w" name="_createTask" messageSort="reply" receiveEvent="_uknJs9xMEeO5dZd1SGUD5w" sendEvent="_uknJsdxMEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_ARMgMNxNEeO5dZd1SGUD5w" name="_getExistingReplicas" receiveEvent="_ARNuUNxNEeO5dZd1SGUD5w" sendEvent="_ARNHQNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_ARPjgNxNEeO5dZd1SGUD5w" name="_getExistingReplicas" messageSort="reply" receiveEvent="_ARQKkNxNEeO5dZd1SGUD5w" sendEvent="_ARO8cNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_Jvu3MNxNEeO5dZd1SGUD5w" name="_insertTaskReplicaInformation" receiveEvent="_JvwFUNxNEeO5dZd1SGUD5w" sendEvent="_JvveQNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_ukl7kNxMEeO5dZd1SGUD5w" name="_createTask" receiveEvent="_ukmiodxMEeO5dZd1SGUD5w" sendEvent="_ukmioNxMEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_HvbGMABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_HvbGMQBFEeSI978P5wLkag" source="Parameter" references="_irdrUABEEeSI978P5wLkag"/>
+          <language></language>
+          <body>WorkloadManagement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_IkrTMABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_Ikr6QABFEeSI978P5wLkag" source="Parameter" references="_kPTcoABEEeSI978P5wLkag"/>
+          <language></language>
+          <body>updateJobFromStager</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_KgtiEABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_KguJIABFEeSI978P5wLkag" source="Parameter" references="_x_ufkABEEeSI978P5wLkag"/>
+          <language></language>
+          <body>jid</body>
+        </argument>
+      </message>
+      <message xmi:id="_uknJstxMEeO5dZd1SGUD5w" name="_createTask" messageSort="reply" receiveEvent="_uknJs9xMEeO5dZd1SGUD5w" sendEvent="_uknJsdxMEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_MLj6UABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_MLkhYABFEeSI978P5wLkag" source="Parameter" references="_irdrUABEEeSI978P5wLkag"/>
+          <language></language>
+          <body>taskID</body>
+        </argument>
+      </message>
+      <message xmi:id="_ARMgMNxNEeO5dZd1SGUD5w" name="_getExistingReplicas" receiveEvent="_ARNuUNxNEeO5dZd1SGUD5w" sendEvent="_ARNHQNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_hNWSEABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_hNW5IABFEeSI978P5wLkag" source="Parameter" references="_UZpWEABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>se</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_htcucABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_htdVgABFEeSI978P5wLkag" source="Parameter" references="_WBQNEABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>lfns</body>
+        </argument>
+      </message>
+      <message xmi:id="_ARPjgNxNEeO5dZd1SGUD5w" name="_getExistingReplicas" messageSort="reply" receiveEvent="_ARQKkNxNEeO5dZd1SGUD5w" sendEvent="_ARO8cNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_jMOZkABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_jMPAoABFEeSI978P5wLkag" source="Parameter" references="_UZpWEABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>existingReplicas</body>
+        </argument>
+      </message>
+      <message xmi:id="_Jvu3MNxNEeO5dZd1SGUD5w" name="_insertTaskReplicaInformation" receiveEvent="_JvwFUNxNEeO5dZd1SGUD5w" sendEvent="_JvveQNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_KQS1kABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_KQS1kQBHEeSI978P5wLkag" source="Parameter" references="_GUE3oABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>taskID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_KqihkABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_KqjIoABHEeSI978P5wLkag" source="Parameter" references="_Hyv1EABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>replicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_Jvx6gNxNEeO5dZd1SGUD5w" name="_insertTaskReplicaInformation" messageSort="reply" receiveEvent="_JvyhkNxNEeO5dZd1SGUD5w" sendEvent="_JvxTcNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_PqEusNxNEeO5dZd1SGUD5w" name="__updateTaskStatus" receiveEvent="_PqF80NxNEeO5dZd1SGUD5w" sendEvent="_PqFVwNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_PqEusNxNEeO5dZd1SGUD5w" name="__updateTaskStatus" receiveEvent="_PqF80NxNEeO5dZd1SGUD5w" sendEvent="_PqFVwNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_ovDeEABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_ovF6UABHEeSI978P5wLkag" source="Parameter" references="_jjpJIABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>taskID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_pdhtoABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_pdiUsABHEeSI978P5wLkag" source="Parameter" references="_lVikkABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Staged&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_PqHyANxNEeO5dZd1SGUD5w" name="__updateTaskStatus" messageSort="reply" receiveEvent="_PqHyAdxNEeO5dZd1SGUD5w" sendEvent="_PqHK8NxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_TvXwINxNEeO5dZd1SGUD5w" name="__updateTaskStatus" receiveEvent="_TvY-QNxNEeO5dZd1SGUD5w" sendEvent="_TvYXMNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_TvXwINxNEeO5dZd1SGUD5w" name="__updateTaskStatus" receiveEvent="_TvY-QNxNEeO5dZd1SGUD5w" sendEvent="_TvYXMNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_s_BecABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_s_CFgABHEeSI978P5wLkag" source="Parameter" references="_jjpJIABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>taskID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_thiVoABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_thi8sABHEeSI978P5wLkag" source="Parameter" references="_lVikkABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Failed&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_TvazcNxNEeO5dZd1SGUD5w" name="__updateTaskStatus" messageSort="reply" receiveEvent="_TvbagNxNEeO5dZd1SGUD5w" sendEvent="_TvaMYNxNEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_xUk2QNxUEeO5dZd1SGUD5w" name="setStatus" receiveEvent="_xUmEYNxUEeO5dZd1SGUD5w" sendEvent="_xUldUNxUEeO5dZd1SGUD5w" connector="_N1_FcNxOEeO5dZd1SGUD5w"/>
+      <message xmi:id="_xUk2QNxUEeO5dZd1SGUD5w" name="setStatus" receiveEvent="_xUmEYNxUEeO5dZd1SGUD5w" sendEvent="_xUldUNxUEeO5dZd1SGUD5w" connector="_N1_FcNxOEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_yseJcABHEeSI978P5wLkag">
+          <eAnnotations xmi:id="_ysewgABHEeSI978P5wLkag" source="Parameter" references="_wcoNwABHEeSI978P5wLkag"/>
+          <language></language>
+          <body>&quot;Staging&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_xUnSgdxUEeO5dZd1SGUD5w" name="setStatus" messageSort="reply" receiveEvent="_xUnSgtxUEeO5dZd1SGUD5w" sendEvent="_xUnSgNxUEeO5dZd1SGUD5w" connector="_N1_FcNxOEeO5dZd1SGUD5w"/>
-      <message xmi:id="_sD7W0NxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" receiveEvent="_sD8k8NxmEeO5dZd1SGUD5w" sendEvent="_sD794NxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_sD-aINxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" messageSort="reply" receiveEvent="_sD_BMNxmEeO5dZd1SGUD5w" sendEvent="_sD9zENxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_t_S3UNxmEeO5dZd1SGUD5w" name="_insertReplicaInformation" receiveEvent="_t_UFcdxmEeO5dZd1SGUD5w" sendEvent="_t_UFcNxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_sD7W0NxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" receiveEvent="_sD8k8NxmEeO5dZd1SGUD5w" sendEvent="_sD794NxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_8Qd6IABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_8QehMABFEeSI978P5wLkag" source="Parameter" references="_3Zwp4ABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>existingReplica</body>
+        </argument>
+      </message>
+      <message xmi:id="_sD-aINxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" messageSort="reply" receiveEvent="_sD_BMNxmEeO5dZd1SGUD5w" sendEvent="_sD9zENxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_9e2Y0ABFEeSI978P5wLkag">
+          <eAnnotations xmi:id="_9e2Y0QBFEeSI978P5wLkag" source="Parameter" references="_3Zwp4ABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>taskState</body>
+        </argument>
+      </message>
+      <message xmi:id="_t_S3UNxmEeO5dZd1SGUD5w" name="_insertReplicaInformation" receiveEvent="_t_UFcdxmEeO5dZd1SGUD5w" sendEvent="_t_UFcNxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_sUfwMABGEeSI978P5wLkag">
+          <eAnnotations xmi:id="_sUfwMQBGEeSI978P5wLkag" source="Parameter" references="_neRBEABGEeSI978P5wLkag"/>
+          <language></language>
+          <body>lfn</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_s0DaAABGEeSI978P5wLkag">
+          <eAnnotations xmi:id="_s0DaAQBGEeSI978P5wLkag" source="Parameter" references="_oBlwkABGEeSI978P5wLkag"/>
+          <language></language>
+          <body>se</body>
+        </argument>
+      </message>
       <message xmi:id="_t_V6oNxmEeO5dZd1SGUD5w" name="_insertReplicaInformation" messageSort="reply" receiveEvent="_t_WhsNxmEeO5dZd1SGUD5w" sendEvent="_t_VTkNxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_yyPB4NxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" receiveEvent="_yyQQANxmEeO5dZd1SGUD5w" sendEvent="_yyPo8NxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_yySFMNxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" messageSort="reply" receiveEvent="_yySFMdxmEeO5dZd1SGUD5w" sendEvent="_yyReINxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_uteSUNxuEeO5dZd1SGUD5w" name="blabla" receiveEvent="_utgHgNxuEeO5dZd1SGUD5w" sendEvent="_utfgcNxuEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
-      <message xmi:id="_utgHg9xuEeO5dZd1SGUD5w" name="blabla" messageSort="reply" receiveEvent="_utgukNxuEeO5dZd1SGUD5w" sendEvent="_utgHgtxuEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_yyPB4NxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" receiveEvent="_yyQQANxmEeO5dZd1SGUD5w" sendEvent="_yyPo8NxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_3qYDUABGEeSI978P5wLkag">
+          <eAnnotations xmi:id="_3qYqYABGEeSI978P5wLkag" source="Parameter" references="_3Zwp4ABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>newFileState</body>
+        </argument>
+      </message>
+      <message xmi:id="_yySFMNxmEeO5dZd1SGUD5w" name="__getTaskStateFromReplicaState" messageSort="reply" receiveEvent="_yySFMdxmEeO5dZd1SGUD5w" sendEvent="_yyReINxmEeO5dZd1SGUD5w" connector="_uknwwNxMEeO5dZd1SGUD5w">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_5hgkEABGEeSI978P5wLkag">
+          <eAnnotations xmi:id="_5hhLIABGEeSI978P5wLkag" source="Parameter" references="_3Zwp4ABFEeSI978P5wLkag"/>
+          <language></language>
+          <body>newTaskState</body>
+        </argument>
+      </message>
+      <message xmi:id="_IR7ZgABJEeSI978P5wLkag" name="blabla" receiveEvent="_IR8AkQBJEeSI978P5wLkag" sendEvent="_IR8AkABJEeSI978P5wLkag" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
+      <message xmi:id="_IR9OsABJEeSI978P5wLkag" name="blabla" messageSort="reply" receiveEvent="_IR9OsQBJEeSI978P5wLkag" sendEvent="_IR8noQBJEeSI978P5wLkag" connector="_uknwwNxMEeO5dZd1SGUD5w"/>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_uy9EwNupEeOo1dgjRue2fQ" name="StageRequestSD">
       <eAnnotations xmi:id="_u4mZwNupEeOo1dgjRue2fQ" source="uml2.diagrams">
@@ -2809,7 +3567,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T5QB8NuqEeOo1dgjRue2fQ" id="975:926"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T5QB8duqEeOo1dgjRue2fQ" id="976:264"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_X5Rh0NuqEeOo1dgjRue2fQ" element="_X42rENuqEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_IxFasNuqEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_X5Rh0NuqEeOo1dgjRue2fQ" element="_X42rENuqEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_IxFasNuqEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_X5SI4NuqEeOo1dgjRue2fQ" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_X5Sv8NuqEeOo1dgjRue2fQ" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_X5Sv8duqEeOo1dgjRue2fQ" type="Name"/>
@@ -2819,7 +3577,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X5WaUNuqEeOo1dgjRue2fQ" id="982:397"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X5WaUduqEeOo1dgjRue2fQ" id="1023:0"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_X59eUNuqEeOo1dgjRue2fQ" element="_X45uYNuqEeOo1dgjRue2fQ" source="_IxFasNuqEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_X59eUNuqEeOo1dgjRue2fQ" element="_X45uYNuqEeOo1dgjRue2fQ" source="_IxFasNuqEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_X59eUtuqEeOo1dgjRue2fQ" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_X59eVNuqEeOo1dgjRue2fQ" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_X5-FYNuqEeOo1dgjRue2fQ" type="Name"/>
@@ -2859,7 +3617,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oJXsMNuqEeOo1dgjRue2fQ" id="1140:555"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oJXsMduqEeOo1dgjRue2fQ" id="1172:767"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_oJ6ewNuqEeOo1dgjRue2fQ" element="_oIydYNuqEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_oJ6ewNuqEeOo1dgjRue2fQ" element="_oIydYNuqEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_oJ7s4NuqEeOo1dgjRue2fQ" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_oJ7s4tuqEeOo1dgjRue2fQ" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_oJ8T8NuqEeOo1dgjRue2fQ" type="Name"/>
@@ -2879,7 +3637,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3rbE0NuqEeOo1dgjRue2fQ" id="1339:635"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3rbr4NuqEeOo1dgjRue2fQ" id="1395:714"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_3r5l8NuqEeOo1dgjRue2fQ" element="_3qlXU9uqEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_3r5l8NuqEeOo1dgjRue2fQ" element="_3qlXU9uqEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_3r6NANuqEeOo1dgjRue2fQ" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_3r60EduqEeOo1dgjRue2fQ" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_3r60EtuqEeOo1dgjRue2fQ" type="Name"/>
@@ -2889,7 +3647,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3r7bINuqEeOo1dgjRue2fQ" id="1397:1164"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3r7bIduqEeOo1dgjRue2fQ" id="1398:264"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_UiG04NuuEeOo1dgjRue2fQ" element="_UgRB0NuuEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_UiG04NuuEeOo1dgjRue2fQ" element="_UgRB0NuuEeOo1dgjRue2fQ" source="_7UvKUNupEeOo1dgjRue2fQ" target="_7UvKUNupEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_UiHb8NuuEeOo1dgjRue2fQ" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_UiHb8tuuEeOo1dgjRue2fQ" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_UiHb89uuEeOo1dgjRue2fQ" type="Name"/>
@@ -3189,7 +3947,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OdRFQf7nEeOM5abBCfF44A" id="1584:1322"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OdRFQv7nEeOM5abBCfF44A" id="1585:0"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_jz8qwP7uEeOM5abBCfF44A" element="_jxZGAP7uEeOM5abBCfF44A" source="_IxFasNuqEeOo1dgjRue2fQ" target="_IxFasNuqEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_jz8qwP7uEeOM5abBCfF44A" element="_jxZGAP7uEeOM5abBCfF44A" source="_IxFasNuqEeOo1dgjRue2fQ" target="_IxFasNuqEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_jz8qwv7uEeOM5abBCfF44A" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_jz8qxP7uEeOM5abBCfF44A" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_jz9R0P7uEeOM5abBCfF44A" type="Name"/>
@@ -3199,7 +3957,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jz_uEP7uEeOM5abBCfF44A" id="2228:344"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jz_uEf7uEeOM5abBCfF44A" id="2290:635"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_j1j0UP7uEeOM5abBCfF44A" element="_jxbiQf7uEeOM5abBCfF44A" source="_IxFasNuqEeOo1dgjRue2fQ" target="_IxFasNuqEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_j1j0UP7uEeOM5abBCfF44A" element="_jxbiQf7uEeOM5abBCfF44A" source="_IxFasNuqEeOo1dgjRue2fQ" target="_IxFasNuqEeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_j1j0Uv7uEeOM5abBCfF44A" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_j1j0VP7uEeOM5abBCfF44A" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_j1kbYP7uEeOM5abBCfF44A" type="Name"/>
@@ -3209,7 +3967,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j1kbYf7uEeOM5abBCfF44A" id="2293:1322"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_j1kbYv7uEeOM5abBCfF44A" id="2294:264"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_uUGfsP8CEeOAFvlXGtzbgg" element="_uSrjYP8CEeOAFvlXGtzbgg" source="_7UvKUNupEeOo1dgjRue2fQ" target="_uSjnkP8CEeOAFvlXGtzbgg" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_uUGfsP8CEeOAFvlXGtzbgg" element="_uSrjYP8CEeOAFvlXGtzbgg" source="_7UvKUNupEeOo1dgjRue2fQ" target="_uSjnkP8CEeOAFvlXGtzbgg" fontName="Ubuntu" fontHeight="8" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_uUHGwP8CEeOAFvlXGtzbgg" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_uUHGwv8CEeOAFvlXGtzbgg" type="Stereotype"/>
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_uUHGw_8CEeOAFvlXGtzbgg" type="Name"/>
@@ -3467,45 +4225,167 @@
       <message xmi:id="_T4RKgNuqEeOo1dgjRue2fQ" name="getStorageUsage" receiveEvent="_T4S_sNuqEeOo1dgjRue2fQ" sendEvent="_T4SYoNuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_T4lTkNuqEeOo1dgjRue2fQ" name="getStorageUsage" messageSort="reply" receiveEvent="_T4l6oNuqEeOo1dgjRue2fQ" sendEvent="_T4ksgNuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_X42rENuqEeOo1dgjRue2fQ" name="getSubmittedStagePins" receiveEvent="_X435MNuqEeOo1dgjRue2fQ" sendEvent="_X43SINuqEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_X45uYNuqEeOo1dgjRue2fQ" name="getSubmittedStagePins" messageSort="reply" receiveEvent="_X46VcNuqEeOo1dgjRue2fQ" sendEvent="_X45HUNuqEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_X45uYNuqEeOo1dgjRue2fQ" name="getSubmittedStagePins" messageSort="reply" receiveEvent="_X46VcNuqEeOo1dgjRue2fQ" sendEvent="_X45HUNuqEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_JJzpgP-VEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_JJzpgf-VEeOAFvlXGtzbgg" source="Parameter" references="_B6zFIP-VEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>storageElementUsage</body>
+        </argument>
+      </message>
       <message xmi:id="_g_bOANuqEeOo1dgjRue2fQ" name="submitStageRequests" receiveEvent="_g_ccINuqEeOo1dgjRue2fQ" sendEvent="_g_b1ENuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_g_e4YNuqEeOo1dgjRue2fQ" name="submitStageRequests" messageSort="reply" receiveEvent="_g_ffcNuqEeOo1dgjRue2fQ" sendEvent="_g_eRUNuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_oIuzANuqEeOo1dgjRue2fQ" name="_getMissingReplicas" receiveEvent="_oIwoMNuqEeOo1dgjRue2fQ" sendEvent="_oIvaENuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_oIydYNuqEeOo1dgjRue2fQ" name="_getMissingReplicas" messageSort="reply" receiveEvent="_oIzrgNuqEeOo1dgjRue2fQ" sendEvent="_oIx2UNuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_oIydYNuqEeOo1dgjRue2fQ" name="_getMissingReplicas" messageSort="reply" receiveEvent="_oIzrgNuqEeOo1dgjRue2fQ" sendEvent="_oIx2UNuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="__j_ecP-XEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="__j_ecf-XEeOAFvlXGtzbgg" source="Parameter" references="_75eUgP-XEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>res</body>
+        </argument>
+      </message>
       <message xmi:id="_3qkwQNuqEeOo1dgjRue2fQ" name="__getStagedReplicas" receiveEvent="_3qlXUNuqEeOo1dgjRue2fQ" sendEvent="_3qkwQduqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_3qlXU9uqEeOo1dgjRue2fQ" name="__getStagedReplicas" messageSort="reply" receiveEvent="_3ql-YNuqEeOo1dgjRue2fQ" sendEvent="_3qlXUtuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_UgRB0NuuEeOo1dgjRue2fQ" name="_issuePrestageRequests" receiveEvent="_UgSP8NuuEeOo1dgjRue2fQ" sendEvent="_UgRo4NuuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_3qlXU9uqEeOo1dgjRue2fQ" name="__getStagedReplicas" messageSort="reply" receiveEvent="_3ql-YNuqEeOo1dgjRue2fQ" sendEvent="_3qlXUtuqEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_cWmOgP-VEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_cWmOgf-VEeOAFvlXGtzbgg" source="Parameter" references="_WgKmoP-VEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>stagedReplicas</body>
+        </argument>
+      </message>
+      <message xmi:id="_UgRB0NuuEeOo1dgjRue2fQ" name="_issuePrestageRequests" receiveEvent="_UgSP8NuuEeOo1dgjRue2fQ" sendEvent="_UgRo4NuuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_pAKIUP-bEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_pALWcP-bEeOAFvlXGtzbgg" source="Parameter" references="_j4d1wP-bEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>storageElement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_qAQTYP-bEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_qAQTYf-bEeOAFvlXGtzbgg" source="Parameter" references="_l35W4P-bEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>seReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_UgUFINuuEeOo1dgjRue2fQ" name="_issuePrestageRequests" messageSort="reply" receiveEvent="_UgUsMNuuEeOo1dgjRue2fQ" sendEvent="_UgTeENuuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_YUBAQNuuEeOo1dgjRue2fQ" name="prestageStorageFile" receiveEvent="_YUCOYNuuEeOo1dgjRue2fQ" sendEvent="_YUBnUNuuEeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ"/>
       <message xmi:id="_YUEDkNuuEeOo1dgjRue2fQ" name="prestageStorageFile" messageSort="reply" receiveEvent="_YUEqoNuuEeOo1dgjRue2fQ" sendEvent="_YUDcgduuEeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ"/>
-      <message xmi:id="_nAHBQNuuEeOo1dgjRue2fQ" name="insertStageRequest" receiveEvent="_nAIPYNuuEeOo1dgjRue2fQ" sendEvent="_nAHoUNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_nAHBQNuuEeOo1dgjRue2fQ" name="insertStageRequest" receiveEvent="_nAIPYNuuEeOo1dgjRue2fQ" sendEvent="_nAHoUNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_FWo1sP-cEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_FWpcwP-cEeOAFvlXGtzbgg" source="Parameter" references="_CMFlQP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>stageRequests</body>
+        </argument>
+      </message>
       <message xmi:id="_nAKEkNuuEeOo1dgjRue2fQ" name="insertStageRequest" messageSort="reply" receiveEvent="_nAKroNuuEeOo1dgjRue2fQ" sendEvent="_nAJdgNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_okbTsNuuEeOo1dgjRue2fQ" name="updateReplicaStatus" receiveEvent="_okrLUNuuEeOo1dgjRue2fQ" sendEvent="_okqkQNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_okbTsNuuEeOo1dgjRue2fQ" name="updateReplicaStatus" receiveEvent="_okrLUNuuEeOo1dgjRue2fQ" sendEvent="_okqkQNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_VADakP-cEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_VAEBoP-cEeOAFvlXGtzbgg" source="Parameter" references="_OloU0P-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;StageSubmitted&quot;</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_XVtDUP-cEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_XVtqYP-cEeOAFvlXGtzbgg" source="Parameter" references="_RtlkQP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>updatedPfnIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_oktAgNuuEeOo1dgjRue2fQ" name="updateReplicaStatus" messageSort="reply" receiveEvent="_oktAgduuEeOo1dgjRue2fQ" sendEvent="_oksZcNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
       <message xmi:id="_ysGHQNuuEeOo1dgjRue2fQ" name="_getOnlineReplicas" receiveEvent="_ysHVYNuuEeOo1dgjRue2fQ" sendEvent="_ysGuUNuuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_ysJKkNuuEeOo1dgjRue2fQ" name="_getOnlineReplicas" messageSort="reply" receiveEvent="_ysJxoNuuEeOo1dgjRue2fQ" sendEvent="_ysIjgNuuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
       <message xmi:id="_2jXTwNuuEeOo1dgjRue2fQ" name="__getWaitingReplicas" receiveEvent="_2jZI8NuuEeOo1dgjRue2fQ" sendEvent="_2jYh4NuuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_2jaXENuuEeOo1dgjRue2fQ" name="__getWaitingReplicas" messageSort="reply" receiveEvent="_2jaXEduuEeOo1dgjRue2fQ" sendEvent="_2jZwAduuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_2jaXENuuEeOo1dgjRue2fQ" name="__getWaitingReplicas" messageSort="reply" receiveEvent="_2jaXEduuEeOo1dgjRue2fQ" sendEvent="_2jZwAduuEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_WxoQcP-dEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_Wxo3gP-dEeOAFvlXGtzbgg" source="Parameter" references="_TD2XIP-dEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>waitingReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_Bcj1cNuwEeOo1dgjRue2fQ" name="_getOfflineReplicas" receiveEvent="_BclDkNuwEeOo1dgjRue2fQ" sendEvent="_BckcgNuwEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_BclqoNuwEeOo1dgjRue2fQ" name="_getOfflineReplicas" messageSort="reply" receiveEvent="_BclqoduwEeOo1dgjRue2fQ" sendEvent="_BclDktuwEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_BclqoNuwEeOo1dgjRue2fQ" name="_getOfflineReplicas" messageSort="reply" receiveEvent="_BclqoduwEeOo1dgjRue2fQ" sendEvent="_BclDktuwEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_8ZFZ8P-dEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_8ZGBAP-dEeOAFvlXGtzbgg" source="Parameter" references="_5IM4AP-dEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>offlineReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_FnMp4NuwEeOo1dgjRue2fQ" name="__getOfflineReplicas" receiveEvent="_FnMp4tuwEeOo1dgjRue2fQ" sendEvent="_FnMp4duwEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_FnNQ8tuwEeOo1dgjRue2fQ" name="__getOfflineReplicas" messageSort="reply" receiveEvent="_FnNQ89uwEeOo1dgjRue2fQ" sendEvent="_FnNQ8duwEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_Xu4EINu0EeOo1dgjRue2fQ" name="_issuePrestageRequests" receiveEvent="_Xu5SQNu0EeOo1dgjRue2fQ" sendEvent="_Xu4rMNu0EeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_FnNQ8tuwEeOo1dgjRue2fQ" name="__getOfflineReplicas" messageSort="reply" receiveEvent="_FnNQ89uwEeOo1dgjRue2fQ" sendEvent="_FnNQ8duwEeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_ufWqAP-dEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_ufXREP-dEeOAFvlXGtzbgg" source="Parameter" references="_hs9VkP-dEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>offlineReplicas</body>
+        </argument>
+      </message>
+      <message xmi:id="_Xu4EINu0EeOo1dgjRue2fQ" name="_issuePrestageRequests" receiveEvent="_Xu5SQNu0EeOo1dgjRue2fQ" sendEvent="_Xu4rMNu0EeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="__BEv4P-dEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="__BF-AP-dEeOAFvlXGtzbgg" source="Parameter" references="_j4d1wP-bEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>storageElement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="__vPdcP-dEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="__vQEgP-dEeOAFvlXGtzbgg" source="Parameter" references="_l35W4P-bEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>seReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_Xu7HcNu0EeOo1dgjRue2fQ" name="_issuePrestageRequests" messageSort="reply" receiveEvent="_Xu7Hcdu0EeOo1dgjRue2fQ" sendEvent="_Xu6gYNu0EeOo1dgjRue2fQ" connector="_L72GgduqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_bq84INu0EeOo1dgjRue2fQ" name="prestageStorageFile" receiveEvent="_bq-GQNu0EeOo1dgjRue2fQ" sendEvent="_bq9fMNu0EeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ"/>
+      <message xmi:id="_bq84INu0EeOo1dgjRue2fQ" name="prestageStorageFile" receiveEvent="_bq-GQNu0EeOo1dgjRue2fQ" sendEvent="_bq9fMNu0EeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_BXqz0P-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_BXra4P-eEeOAFvlXGtzbgg" source="Parameter" references="_9L5B0P-bEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>pfnRepIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_bq-tUdu0EeOo1dgjRue2fQ" name="prestageStorageFile" messageSort="reply" receiveEvent="_bq-tUtu0EeOo1dgjRue2fQ" sendEvent="_bq-tUNu0EeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ"/>
-      <message xmi:id="_le6FgNu0EeOo1dgjRue2fQ" name="insertStageRequest" receiveEvent="_le6skNu0EeOo1dgjRue2fQ" sendEvent="_le6Fgdu0EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_le6FgNu0EeOo1dgjRue2fQ" name="insertStageRequest" receiveEvent="_le6skNu0EeOo1dgjRue2fQ" sendEvent="_le6Fgdu0EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_DyBWYP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_DyBWYf-eEeOAFvlXGtzbgg" source="Parameter" references="_CMFlQP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>stageRequests</body>
+        </argument>
+      </message>
       <message xmi:id="_le7Todu0EeOo1dgjRue2fQ" name="insertStageRequest" messageSort="reply" receiveEvent="_le76sNu0EeOo1dgjRue2fQ" sendEvent="_le7ToNu0EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_oahiENu0EeOo1dgjRue2fQ" name="updateReplicaStatus" receiveEvent="_oajXQNu0EeOo1dgjRue2fQ" sendEvent="_oaiJINu0EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_oahiENu0EeOo1dgjRue2fQ" name="updateReplicaStatus" receiveEvent="_oajXQNu0EeOo1dgjRue2fQ" sendEvent="_oaiJINu0EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_GKV4oP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_GKWfsP-eEeOAFvlXGtzbgg" source="Parameter" references="_OloU0P-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;StageSubmitted&quot;</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_G-VhYP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_G-WIcP-eEeOAFvlXGtzbgg" source="Parameter" references="_RtlkQP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_oalMcNu0EeOo1dgjRue2fQ" name="updateReplicaStatus" messageSort="reply" receiveEvent="_oalzgNu0EeOo1dgjRue2fQ" sendEvent="_oaklYNu0EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
       <message xmi:id="_ZmB_UNw-EeOo1dgjRue2fQ" name="getStagedReplicas" receiveEvent="_ZmDNcNw-EeOo1dgjRue2fQ" sendEvent="_ZmCmYNw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
       <message xmi:id="_ZmEbkNw-EeOo1dgjRue2fQ" name="getStagedReplicas" messageSort="reply" receiveEvent="_ZmFCoNw-EeOo1dgjRue2fQ" sendEvent="_ZmD0gNw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
       <message xmi:id="_eg0eUNw-EeOo1dgjRue2fQ" name="getWaitingReplicas" receiveEvent="_eg1scNw-EeOo1dgjRue2fQ" sendEvent="_eg1FYNw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_eg26kNw-EeOo1dgjRue2fQ" name="getWaitingReplicas" messageSort="reply" receiveEvent="_eg3hoNw-EeOo1dgjRue2fQ" sendEvent="_eg2Tgdw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
+      <message xmi:id="_eg26kNw-EeOo1dgjRue2fQ" name="getWaitingReplicas" messageSort="reply" receiveEvent="_eg3hoNw-EeOo1dgjRue2fQ" sendEvent="_eg2Tgdw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_7aBmIP-cEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_7aBmIf-cEeOAFvlXGtzbgg" source="Parameter" references="_y1GXsP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>waitingReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_kNQcsNw-EeOo1dgjRue2fQ" name="getOfflineReplicas" receiveEvent="_kNRDwdw-EeOo1dgjRue2fQ" sendEvent="_kNRDwNw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_kNRq0tw-EeOo1dgjRue2fQ" name="getOfflineReplicas" messageSort="reply" receiveEvent="_kNRq09w-EeOo1dgjRue2fQ" sendEvent="_kNRq0dw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ"/>
-      <message xmi:id="_jxZGAP7uEeOM5abBCfF44A" name="getCacheReplicas" receiveEvent="_jxaUIP7uEeOM5abBCfF44A" sendEvent="_jxZtEP7uEeOM5abBCfF44A" connector="_jxcwYP7uEeOM5abBCfF44A"/>
-      <message xmi:id="_jxbiQf7uEeOM5abBCfF44A" name="getCacheReplicas" messageSort="reply" receiveEvent="_jxcJUP7uEeOM5abBCfF44A" sendEvent="_jxbiQP7uEeOM5abBCfF44A" connector="_jxcwYP7uEeOM5abBCfF44A"/>
+      <message xmi:id="_kNRq0tw-EeOo1dgjRue2fQ" name="getOfflineReplicas" messageSort="reply" receiveEvent="_kNRq09w-EeOo1dgjRue2fQ" sendEvent="_kNRq0dw-EeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_tPFU8P-dEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_tPF8AP-dEeOAFvlXGtzbgg" source="Parameter" references="_mO4BkP-dEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>offlineReplicas</body>
+        </argument>
+      </message>
+      <message xmi:id="_jxZGAP7uEeOM5abBCfF44A" name="getCacheReplicas" receiveEvent="_jxaUIP7uEeOM5abBCfF44A" sendEvent="_jxZtEP7uEeOM5abBCfF44A" connector="_jxcwYP7uEeOM5abBCfF44A">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_OMHFwP-VEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_OMHFwf-VEeOAFvlXGtzbgg" source="Parameter" references="_AfqLkP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;Staged&quot;</body>
+        </argument>
+      </message>
+      <message xmi:id="_jxbiQf7uEeOM5abBCfF44A" name="getCacheReplicas" messageSort="reply" receiveEvent="_jxcJUP7uEeOM5abBCfF44A" sendEvent="_jxbiQP7uEeOM5abBCfF44A" connector="_jxcwYP7uEeOM5abBCfF44A">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_QkbA8P-VEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_QkboAP-VEeOAFvlXGtzbgg" source="Parameter" references="_AfqLkP-PEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>stagedReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_uSrjYP8CEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_uSjAgP8CEeOAFvlXGtzbgg" sendEvent="_uSsKcP8CEeOAFvlXGtzbgg"/>
       <message xmi:id="_uSsxgP8CEeOAFvlXGtzbgg" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_uSt_oP8CEeOAFvlXGtzbgg" sendEvent="_uStYkP8CEeOAFvlXGtzbgg"/>
       <message xmi:id="_4IyJAP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_4IsCYP8GEeOAFvlXGtzbgg" sendEvent="_4IyJAf8GEeOAFvlXGtzbgg"/>
@@ -3520,6 +4400,15 @@
         <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_9tE5sdu0EeOo1dgjRue2fQ" type="Sequence" element="_9sNXANu0EeOo1dgjRue2fQ" name="__addAssociatedReplicas" measurementUnit="Himetric">
           <children xmi:type="umlnotation:UMLShape" xmi:id="_9tE5stu0EeOo1dgjRue2fQ" element="_9sNXANu0EeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label">
             <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_9tE5s9u0EeOo1dgjRue2fQ" type="interaction_compartment">
+              <children xmi:type="umlnotation:UMLShape" xmi:id="_L14YgAA1EeSI978P5wLkag" element="_LzYeIAA1EeSI978P5wLkag" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                <eAnnotations xmi:id="_L14_kAA1EeSI978P5wLkag" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
+                  <details xmi:id="_L14_kQA1EeSI978P5wLkag" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
+                </eAnnotations>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_L14_kgA1EeSI978P5wLkag" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_L15moAA1EeSI978P5wLkag" type="Name"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_L15moQA1EeSI978P5wLkag" type="Parent"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L14YgQA1EeSI978P5wLkag" x="264" y="132" width="4735" height="11985"/>
+              </children>
               <children xmi:type="umlnotation:UMLShape" xmi:id="_ZgA1INu1EeOo1dgjRue2fQ" element="_Zf9x0Nu1EeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                 <eAnnotations xmi:id="_ZgBcMNu1EeOo1dgjRue2fQ" source="com.ibm.xtools.uml.ui.diagram.internal.styles">
                   <details xmi:id="_ZgBcMdu1EeOo1dgjRue2fQ" key="LifelineLabelStyle" value="Represents Name and Type Name"/>
@@ -3551,21 +4440,27 @@
                     <children xmi:type="notation:BasicDecorationNode" xmi:id="_x96JINw-EeOo1dgjRue2fQ" type="guard"/>
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x95iEtw-EeOo1dgjRue2fQ"/>
                   </children>
-                  <children xmi:type="umlnotation:UMLShape" xmi:id="_HbJ6kNxPEeO5dZd1SGUD5w" element="_Ha_igNxPEeO5dZd1SGUD5w" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HbJ6kdxPEeO5dZd1SGUD5w" x="-1" y="1453" height="1453"/>
-                  </children>
-                  <children xmi:type="umlnotation:UMLShape" xmi:id="_JM_roNxPEeO5dZd1SGUD5w" element="_JM8BQNxPEeO5dZd1SGUD5w" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_kGatEP7pEeOM5abBCfF44A" type="Stereotype"/>
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_JM_rotxPEeO5dZd1SGUD5w" type="Name"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JM_rodxPEeO5dZd1SGUD5w" x="-1" y="397"/>
+                  <children xmi:type="umlnotation:UMLShape" xmi:id="_ZuzQIAA1EeSI978P5wLkag" element="_ZufHEAA1EeSI978P5wLkag" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_Zu0eQAA1EeSI978P5wLkag" type="Stereotype"/>
+                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_Zu0eQQA1EeSI978P5wLkag" type="Name"/>
+                    <children xmi:type="umlnotation:UMLShape" xmi:id="_a8fyUAA1EeSI978P5wLkag" element="_a8d9IAA1EeSI978P5wLkag" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a8fyUQA1EeSI978P5wLkag" x="-1" y="15"/>
+                    </children>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZuzQIQA1EeSI978P5wLkag" x="-1" y="344"/>
                   </children>
                 </children>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x947Adw-EeOo1dgjRue2fQ" x="344" y="1020" width="8862" height="4074"/>
+              </children>
+              <children xmi:type="umlnotation:UMLShape" xmi:id="_uJongAAzEeSI978P5wLkag" element="_U4x84v73EeOM5abBCfF44A" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uJongQAzEeSI978P5wLkag" x="-1" y="1453" height="1453"/>
               </children>
             </children>
             <children xmi:type="notation:BasicDecorationNode" xmi:id="_9tE5tNu0EeOo1dgjRue2fQ" type="Name"/>
             <children xmi:type="umlnotation:UMLShape" xmi:id="_U4tEYP73EeOM5abBCfF44A" element="_U4r2QP73EeOM5abBCfF44A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_U4tEYf73EeOM5abBCfF44A" x="-1" y="61"/>
+            </children>
+            <children xmi:type="umlnotation:UMLShape" xmi:id="_uJk9IAAzEeSI978P5wLkag" element="_U4yj8v73EeOM5abBCfF44A" fontName="Ubuntu" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uJk9IQAzEeSI978P5wLkag"/>
             </children>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9tE5tdu0EeOo1dgjRue2fQ" x="7925" y="317" width="28839" height="20157"/>
           </children>
@@ -3589,26 +4484,6 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rG3iYNxKEeO5dZd1SGUD5w" id="6:1322"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rG3iYdxKEeO5dZd1SGUD5w" id="7:0"/>
           </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_HbZyMNxPEeO5dZd1SGUD5w" element="_Ha9tUNxPEeO5dZd1SGUD5w" source="_BkPYgNu1EeOo1dgjRue2fQ" target="_BkPYgNu1EeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_HbZyMtxPEeO5dZd1SGUD5w" type="MessageNameLabel">
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_HbaZQNxPEeO5dZd1SGUD5w" type="Stereotype"/>
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_HbaZQdxPEeO5dZd1SGUD5w" type="Name"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HbZyM9xPEeO5dZd1SGUD5w" y="-317"/>
-            </children>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HbZyMdxPEeO5dZd1SGUD5w" points="[0, 0, 0, -29]$[0, 29, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Hbc1gNxPEeO5dZd1SGUD5w" id="2364:889"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Hbc1gdxPEeO5dZd1SGUD5w" id="2513:767"/>
-          </edges>
-          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_kGmTQP7pEeOM5abBCfF44A" element="_HbAwoNxPEeO5dZd1SGUD5w" source="_BkPYgNu1EeOo1dgjRue2fQ" target="_BkPYgNu1EeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
-            <children xmi:type="notation:DecorationNode" xmi:id="_kGmTQv7pEeOM5abBCfF44A" type="MessageNameLabel">
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_kGmTRP7pEeOM5abBCfF44A" type="Stereotype"/>
-              <children xmi:type="notation:BasicDecorationNode" xmi:id="_kGmTRf7pEeOM5abBCfF44A" type="Name"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kGmTQ_7pEeOM5abBCfF44A" y="-317"/>
-            </children>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kGmTQf7pEeOM5abBCfF44A" points="[0, 0, 0, -10]$[0, 10, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kGm6UP7pEeOM5abBCfF44A" id="1708:1322"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kGm6Uf7pEeOM5abBCfF44A" id="1709:264"/>
-          </edges>
           <edges xmi:type="umlnotation:UMLConnector" xmi:id="_U5DCoP73EeOM5abBCfF44A" element="_U4x84P73EeOM5abBCfF44A" source="_U4tEYP73EeOM5abBCfF44A" target="_BkPYgNu1EeOo1dgjRue2fQ" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
             <children xmi:type="notation:DecorationNode" xmi:id="_U5DCov73EeOM5abBCfF44A" type="MessageNameLabel">
               <children xmi:type="notation:BasicDecorationNode" xmi:id="_U5DpsP73EeOM5abBCfF44A" type="Stereotype"/>
@@ -3617,6 +4492,24 @@
             </children>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_U5DCof73EeOM5abBCfF44A" points="[5, 3, -138, -58]$[143, 61, 0, 0]"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_U5GtAP73EeOM5abBCfF44A" id="3244:1280"/>
+          </edges>
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_uJuHEAAzEeSI978P5wLkag" element="_U4yj8f73EeOM5abBCfF44A" source="_BkPYgNu1EeOo1dgjRue2fQ" target="_uJk9IAAzEeSI978P5wLkag" fontName="Ubuntu" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_uJuuIAAzEeSI978P5wLkag" type="MessageNameLabel">
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_uJvVMAAzEeSI978P5wLkag" type="Stereotype"/>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_uJvVMQAzEeSI978P5wLkag" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uJuuIQAzEeSI978P5wLkag" y="-317"/>
+            </children>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uJuHEQAzEeSI978P5wLkag" points="[0, 0, -6, 206]$[0, -199, -6, 7]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uJvVMgAzEeSI978P5wLkag" id="105:1322"/>
+          </edges>
+          <edges xmi:type="umlnotation:UMLConnector" xmi:id="_a8_hkAA1EeSI978P5wLkag" element="_a8nHEAA1EeSI978P5wLkag" source="_BkPYgNu1EeOo1dgjRue2fQ" target="_a8fyUAA1EeSI978P5wLkag" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_a9AIoAA1EeSI978P5wLkag" type="MessageNameLabel">
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_a9AIogA1EeSI978P5wLkag" type="Stereotype"/>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_a9AIowA1EeSI978P5wLkag" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a9AIoQA1EeSI978P5wLkag" y="-317"/>
+            </children>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_a8_hkQA1EeSI978P5wLkag" points="[0, 0, 83, 84]$[-76, -77, 7, 7]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a9MV4AA1EeSI978P5wLkag" id="229:-396"/>
           </edges>
         </contents>
       </eAnnotations>
@@ -3632,7 +4525,8 @@
         <end xmi:id="_ClXMYdu3EeOo1dgjRue2fQ" role="_C98rHNtIEeOBr-ZtRbdM3Q"/>
         <end xmi:id="_ClXMYtu3EeOo1dgjRue2fQ" role="_C98rHNtIEeOBr-ZtRbdM3Q"/>
       </ownedConnector>
-      <lifeline xmi:id="_9scAgNu0EeOo1dgjRue2fQ" represents="_C98rHNtIEeOBr-ZtRbdM3Q" coveredBy="_uC6TMNw-EeOo1dgjRue2fQ _uC8vcdw-EeOo1dgjRue2fQ _x9rfoNw-EeOo1dgjRue2fQ _Ha-UYNxPEeO5dZd1SGUD5w _Ha-7cNxPEeO5dZd1SGUD5w _Ha_igNxPEeO5dZd1SGUD5w _HbAJkNxPEeO5dZd1SGUD5w _HbBXsNxPEeO5dZd1SGUD5w _JM8BQNxPEeO5dZd1SGUD5w _U4x84f73EeOM5abBCfF44A _U4x84v73EeOM5abBCfF44A _U4yj8P73EeOM5abBCfF44A"/>
+      <lifeline xmi:id="_9scAgNu0EeOo1dgjRue2fQ" represents="_C98rHNtIEeOBr-ZtRbdM3Q" coveredBy="_uC6TMNw-EeOo1dgjRue2fQ _uC8vcdw-EeOo1dgjRue2fQ _x9rfoNw-EeOo1dgjRue2fQ _U4x84f73EeOM5abBCfF44A _U4x84v73EeOM5abBCfF44A _U4yj8P73EeOM5abBCfF44A _a8nuIAA1EeSI978P5wLkag _a8o8QQA1EeSI978P5wLkag"/>
+      <lifeline xmi:id="_LzYeIAA1EeSI978P5wLkag" name="srAgent2" represents="_C98rHNtIEeOBr-ZtRbdM3Q" coveredBy="_x9rfoNw-EeOo1dgjRue2fQ _ZufHEAA1EeSI978P5wLkag"/>
       <lifeline xmi:id="_Zf9x0Nu1EeOo1dgjRue2fQ" name="smDB" represents="_C98rGttIEeOBr-ZtRbdM3Q" coveredBy="_uC66QNw-EeOo1dgjRue2fQ _uC7hUNw-EeOo1dgjRue2fQ _uC8IYNw-EeOo1dgjRue2fQ"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U4x84f73EeOM5abBCfF44A" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C98rmNtIEeOBr-ZtRbdM3Q" message="_U4x84P73EeOM5abBCfF44A"/>
       <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_U4x84v73EeOM5abBCfF44A" covered="_9scAgNu0EeOo1dgjRue2fQ" start="_U4x84f73EeOM5abBCfF44A" finish="_U4yj8P73EeOM5abBCfF44A"/>
@@ -3641,7 +4535,7 @@
       <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_uC7hUNw-EeOo1dgjRue2fQ" covered="_Zf9x0Nu1EeOo1dgjRue2fQ" start="_uC66QNw-EeOo1dgjRue2fQ" finish="_uC8IYNw-EeOo1dgjRue2fQ"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uC8IYNw-EeOo1dgjRue2fQ" covered="_Zf9x0Nu1EeOo1dgjRue2fQ" event="_C99SANtIEeOBr-ZtRbdM3Q" message="_uC8vcNw-EeOo1dgjRue2fQ"/>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_uC8vcdw-EeOo1dgjRue2fQ" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C99SAdtIEeOBr-ZtRbdM3Q" message="_uC8vcNw-EeOo1dgjRue2fQ"/>
-      <fragment xmi:type="uml:CombinedFragment" xmi:id="_x9rfoNw-EeOo1dgjRue2fQ" covered="_9scAgNu0EeOo1dgjRue2fQ" interactionOperator="loop">
+      <fragment xmi:type="uml:CombinedFragment" xmi:id="_x9rfoNw-EeOo1dgjRue2fQ" covered="_9scAgNu0EeOo1dgjRue2fQ _LzYeIAA1EeSI978P5wLkag" interactionOperator="loop">
         <operand xmi:id="_x9sGsNw-EeOo1dgjRue2fQ">
           <guard xmi:id="_x9tU0Nw-EeOo1dgjRue2fQ">
             <specification xmi:type="uml:OpaqueExpression" xmi:id="_x9ui8Nw-EeOo1dgjRue2fQ">
@@ -3651,23 +4545,40 @@
             <minint xmi:type="uml:LiteralInteger" xmi:id="_x9tU0dw-EeOo1dgjRue2fQ"/>
             <maxint xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x9t74Nw-EeOo1dgjRue2fQ" value="*"/>
           </guard>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ha-UYNxPEeO5dZd1SGUD5w" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C98rodtIEeOBr-ZtRbdM3Q" message="_Ha9tUNxPEeO5dZd1SGUD5w"/>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ha-7cNxPEeO5dZd1SGUD5w" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C98rottIEeOBr-ZtRbdM3Q" message="_Ha9tUNxPEeO5dZd1SGUD5w"/>
-          <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Ha_igNxPEeO5dZd1SGUD5w" covered="_9scAgNu0EeOo1dgjRue2fQ" start="_Ha-7cNxPEeO5dZd1SGUD5w" finish="_HbAJkNxPEeO5dZd1SGUD5w"/>
-          <fragment xmi:type="uml:InteractionUse" xmi:id="_JM8BQNxPEeO5dZd1SGUD5w" name="Unspecified Interaction Ref1" covered="_9scAgNu0EeOo1dgjRue2fQ" refersTo="_MbzX8Nu1EeOo1dgjRue2fQ"/>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HbAJkNxPEeO5dZd1SGUD5w" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C98rodtIEeOBr-ZtRbdM3Q" message="_HbAwoNxPEeO5dZd1SGUD5w"/>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_HbBXsNxPEeO5dZd1SGUD5w" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C98rottIEeOBr-ZtRbdM3Q" message="_HbAwoNxPEeO5dZd1SGUD5w"/>
+          <fragment xmi:type="uml:InteractionUse" xmi:id="_ZufHEAA1EeSI978P5wLkag" name="Unspecified Interaction Ref1" covered="_LzYeIAA1EeSI978P5wLkag" refersTo="_MbzX8Nu1EeOo1dgjRue2fQ">
+            <actualGate xmi:id="_a8d9IAA1EeSI978P5wLkag" message="_a8nHEAA1EeSI978P5wLkag"/>
+            <actualGate xmi:id="_a8o8QAA1EeSI978P5wLkag" message="_a8oVMAA1EeSI978P5wLkag"/>
+          </fragment>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_a8nuIAA1EeSI978P5wLkag" covered="_9scAgNu0EeOo1dgjRue2fQ" message="_a8nHEAA1EeSI978P5wLkag"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_a8o8QQA1EeSI978P5wLkag" covered="_9scAgNu0EeOo1dgjRue2fQ" message="_a8oVMAA1EeSI978P5wLkag"/>
         </operand>
       </fragment>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_U4yj8P73EeOM5abBCfF44A" covered="_9scAgNu0EeOo1dgjRue2fQ" event="_C98rl9tIEeOBr-ZtRbdM3Q" message="_U4yj8f73EeOM5abBCfF44A"/>
       <formalGate xmi:id="_U4r2QP73EeOM5abBCfF44A" message="_U4x84P73EeOM5abBCfF44A"/>
       <formalGate xmi:id="_U4yj8v73EeOM5abBCfF44A" message="_U4yj8f73EeOM5abBCfF44A"/>
-      <message xmi:id="_uC5sINw-EeOo1dgjRue2fQ" name="getAssociatedReplicas" receiveEvent="_uC66QNw-EeOo1dgjRue2fQ" sendEvent="_uC6TMNw-EeOo1dgjRue2fQ" connector="_rV5Rk9u1EeOo1dgjRue2fQ"/>
-      <message xmi:id="_uC8vcNw-EeOo1dgjRue2fQ" name="getAssociatedReplicas" messageSort="reply" receiveEvent="_uC8vcdw-EeOo1dgjRue2fQ" sendEvent="_uC8IYNw-EeOo1dgjRue2fQ" connector="_rV5Rk9u1EeOo1dgjRue2fQ"/>
-      <message xmi:id="_Ha9tUNxPEeO5dZd1SGUD5w" name="__checkIntegrity" receiveEvent="_Ha-7cNxPEeO5dZd1SGUD5w" sendEvent="_Ha-UYNxPEeO5dZd1SGUD5w" connector="_ClXMYNu3EeOo1dgjRue2fQ"/>
-      <message xmi:id="_HbAwoNxPEeO5dZd1SGUD5w" name="__checkIntegrity" messageSort="reply" receiveEvent="_HbBXsNxPEeO5dZd1SGUD5w" sendEvent="_HbAJkNxPEeO5dZd1SGUD5w" connector="_ClXMYNu3EeOo1dgjRue2fQ"/>
+      <message xmi:id="_uC5sINw-EeOo1dgjRue2fQ" name="getAssociatedReplicas" receiveEvent="_uC66QNw-EeOo1dgjRue2fQ" sendEvent="_uC6TMNw-EeOo1dgjRue2fQ" connector="_rV5Rk9u1EeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_dviBQP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_dvioUP-eEeOAFvlXGtzbgg" source="Parameter" references="_POD74P-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicasToStage</body>
+        </argument>
+      </message>
+      <message xmi:id="_uC8vcNw-EeOo1dgjRue2fQ" name="getAssociatedReplicas" messageSort="reply" receiveEvent="_uC8vcdw-EeOo1dgjRue2fQ" sendEvent="_uC8IYNw-EeOo1dgjRue2fQ" connector="_rV5Rk9u1EeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_euLa0P-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_euMB4P-eEeOAFvlXGtzbgg" source="Parameter" references="_POD74P-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>offlineReplicas</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_feBjYP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_feCKcP-eEeOAFvlXGtzbgg" source="Parameter" references="_XCUiYP-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>waitingReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_U4x84P73EeOM5abBCfF44A" name="__addAssociatedReplicas" receiveEvent="_U4x84f73EeOM5abBCfF44A" sendEvent="_U4r2QP73EeOM5abBCfF44A"/>
       <message xmi:id="_U4yj8f73EeOM5abBCfF44A" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_U4yj8v73EeOM5abBCfF44A" sendEvent="_U4yj8P73EeOM5abBCfF44A"/>
+      <message xmi:id="_a8nHEAA1EeSI978P5wLkag" name="__checkIntegrity" receiveEvent="_a8d9IAA1EeSI978P5wLkag" sendEvent="_a8nuIAA1EeSI978P5wLkag"/>
+      <message xmi:id="_a8oVMAA1EeSI978P5wLkag" name="__checkIntegrity" messageSort="reply" receiveEvent="_a8o8QQA1EeSI978P5wLkag" sendEvent="_a8o8QAA1EeSI978P5wLkag"/>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_MbzX8Nu1EeOo1dgjRue2fQ" name="__checkIntegrity">
       <eAnnotations xmi:id="_Mbz_Adu1EeOo1dgjRue2fQ" source="uml2.diagrams">
@@ -3863,14 +4774,59 @@
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_reVPoP8GEeOAFvlXGtzbgg" covered="_Mbz_ANu1EeOo1dgjRue2fQ" event="_C98rodtIEeOBr-ZtRbdM3Q" message="_reVPof8GEeOAFvlXGtzbgg"/>
       <formalGate xmi:id="_reJpcP8GEeOAFvlXGtzbgg" message="_reUBgP8GEeOAFvlXGtzbgg"/>
       <formalGate xmi:id="_reVPov8GEeOAFvlXGtzbgg" message="_reVPof8GEeOAFvlXGtzbgg"/>
-      <message xmi:id="_X3MpgNw_EeOo1dgjRue2fQ" name="getStorageFileMetadata" receiveEvent="_X3N3oNw_EeOo1dgjRue2fQ" sendEvent="_X3NQkNw_EeOo1dgjRue2fQ" connector="_iX0G0tu2EeOo1dgjRue2fQ"/>
+      <message xmi:id="_X3MpgNw_EeOo1dgjRue2fQ" name="getStorageFileMetadata" receiveEvent="_X3N3oNw_EeOo1dgjRue2fQ" sendEvent="_X3NQkNw_EeOo1dgjRue2fQ" connector="_iX0G0tu2EeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_Gg8lUP-fEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_Gg9MYP-fEeOAFvlXGtzbgg" source="Parameter" references="_DW_KwP-fEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>pfnRepIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_X3PFwNw_EeOo1dgjRue2fQ" name="getStorageFileMetadata" messageSort="reply" receiveEvent="_X3PFwdw_EeOo1dgjRue2fQ" sendEvent="_X3Oesdw_EeOo1dgjRue2fQ" connector="_iX0G0tu2EeOo1dgjRue2fQ"/>
-      <message xmi:id="_clUlgNw_EeOo1dgjRue2fQ" name="updateReplicaFailure" receiveEvent="_clVzoNw_EeOo1dgjRue2fQ" sendEvent="_clVMkNw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ"/>
+      <message xmi:id="_clUlgNw_EeOo1dgjRue2fQ" name="updateReplicaFailure" receiveEvent="_clVzoNw_EeOo1dgjRue2fQ" sendEvent="_clVMkNw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_d2l2EP-fEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_d2mdIP-fEeOAFvlXGtzbgg" source="Parameter" references="_HmwX0P-UEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminalReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_clXBwNw_EeOo1dgjRue2fQ" name="updateReplicaFailure" messageSort="reply" receiveEvent="_clXBwdw_EeOo1dgjRue2fQ" sendEvent="_clWasNw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ"/>
-      <message xmi:id="_iKv88Nw_EeOo1dgjRue2fQ" name="updateReplicaStatus" receiveEvent="_iKxLENw_EeOo1dgjRue2fQ" sendEvent="_iKwkANw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ"/>
+      <message xmi:id="_iKv88Nw_EeOo1dgjRue2fQ" name="updateReplicaStatus" receiveEvent="_iKxLENw_EeOo1dgjRue2fQ" sendEvent="_iKwkANw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_gUDXAP-fEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_gUD-EP-fEeOAFvlXGtzbgg" source="Parameter" references="_OloU0P-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>&quot;Offline&quot;</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_hjatIP-fEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_hjbUMP-fEeOAFvlXGtzbgg" source="Parameter" references="_RtlkQP-cEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>offlineReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_iKyZMNw_EeOo1dgjRue2fQ" name="updateReplicaStatus" messageSort="reply" receiveEvent="_iKzAQNw_EeOo1dgjRue2fQ" sendEvent="_iKxyINw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ"/>
-      <message xmi:id="_reUBgP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_reUokP8GEeOAFvlXGtzbgg" sendEvent="_reJpcP8GEeOAFvlXGtzbgg"/>
-      <message xmi:id="_reVPof8GEeOAFvlXGtzbgg" name="__checkIntegrity" messageSort="reply" receiveEvent="_reVPov8GEeOAFvlXGtzbgg" sendEvent="_reVPoP8GEeOAFvlXGtzbgg"/>
+      <message xmi:id="_reUBgP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_reUokP8GEeOAFvlXGtzbgg" sendEvent="_reJpcP8GEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_-JMQMP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_-JM3QP-eEeOAFvlXGtzbgg" source="Parameter" references="_t46foP-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>storageElement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_-1HiEP-eEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_-1IJIP-eEeOAFvlXGtzbgg" source="Parameter" references="_vbg60P-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>seReplicaIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_reVPof8GEeOAFvlXGtzbgg" name="__checkIntegrity" messageSort="reply" receiveEvent="_reVPov8GEeOAFvlXGtzbgg" sendEvent="_reVPoP8GEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_ktD-oP-fEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_ktElsP-fEeOAFvlXGtzbgg" source="Parameter" references="_t46foP-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>onlineReplicaIDs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_j9wooP-fEeOAFvlXGtzbgg">
+          <eAnnotations xmi:id="_j9woof-fEeOAFvlXGtzbgg" source="Parameter" references="_vbg60P-eEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>offlineReplicaIDs</body>
+        </argument>
+      </message>
     </ownedBehavior>
     <ownedAttribute xmi:id="_C98rGdtIEeOBr-ZtRbdM3Q" name="rpAgent" type="_C9zhq9tIEeOBr-ZtRbdM3Q"/>
     <ownedAttribute xmi:id="_C98rGttIEeOBr-ZtRbdM3Q" name="smDB" type="_C90IdttIEeOBr-ZtRbdM3Q"/>
@@ -4033,8 +4989,31 @@
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C98ra9tIEeOBr-ZtRbdM3Q" name="SendOperationEvent5" operation="_C9zhs9tIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C98rbNtIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent5" operation="_C9zhs9tIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_C98rbdtIEeOBr-ZtRbdM3Q" name="FileCatalog">
-    <ownedOperation xmi:id="_C98rbttIEeOBr-ZtRbdM3Q" name="_exists"/>
-    <ownedOperation xmi:id="_C98rcttIEeOBr-ZtRbdM3Q" name="getFileSize"/>
+    <ownedOperation xmi:id="_C98rbttIEeOBr-ZtRbdM3Q" name="_exists">
+      <ownedParameter xmi:id="_s_fI0P-UEeOAFvlXGtzbgg" name="lfns">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u4cOgf-UEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u4cOgP-UEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C98rcttIEeOBr-ZtRbdM3Q" name="getFileSize">
+      <ownedParameter xmi:id="_CmpbUP-REeOAFvlXGtzbgg" name="lfns" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FTFMYP-REeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FTElUP-REeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="__k2MUP-SEeOAFvlXGtzbgg" name="fileSizes" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CXLKAf-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CXLKAP-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_CmbG8P-TEeOAFvlXGtzbgg" name="terminal" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FmmTYP-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FmlsUP-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_DKcaAP-TEeOAFvlXGtzbgg" name="failed" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F_t-AP-TEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F_tW8P-TEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C98rf9tIEeOBr-ZtRbdM3Q" name="SendOperationEvent6" operation="_C98rbttIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C98rgNtIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent6" operation="_C98rbttIEeOBr-ZtRbdM3Q"/>
@@ -4073,7 +5052,24 @@
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C98rodtIEeOBr-ZtRbdM3Q" name="SendOperationEvent23" operation="_C90ITttIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C98rottIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent23" operation="_C90ITttIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_C98ro9tIEeOBr-ZtRbdM3Q" name="StorageElement">
-    <ownedOperation xmi:id="_C98rpNtIEeOBr-ZtRbdM3Q" name="getFileMetadata"/>
+    <ownedOperation xmi:id="_C98rpNtIEeOBr-ZtRbdM3Q" name="getFileMetadata">
+      <ownedParameter xmi:id="_VmOUYAA5EeSI978P5wLkag" name="pfnRepIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XYxQEAA5EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XYwpAAA5EeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_XmMBAAA5EeSI978P5wLkag" name="terminalReplicas" type="_C98rS9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aG_w4AA5EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aG_J0AA5EeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_jmPSgAA5EeSI978P5wLkag" name="stagedReplicas" type="_C98rS9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q0xVwAA5EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q0wusAA5EeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_mzPaAAA5EeSI978P5wLkag" name="oldRequests" type="_C98rS9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rII9sAA5EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rIIWoAA5EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
     <ownedOperation xmi:id="_C98rqNtIEeOBr-ZtRbdM3Q" name="prestageFile"/>
   </packagedElement>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C98rrNtIEeOBr-ZtRbdM3Q" name="SendOperationEvent24" operation="_C98rpNtIEeOBr-ZtRbdM3Q"/>
@@ -4114,10 +5110,17 @@
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99SH9tIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent41" operation="_C90vKttIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C99SINtIEeOBr-ZtRbdM3Q" name="SendOperationEvent42" operation="_C90IsdtIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99SIdtIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent42" operation="_C90IsdtIEeOBr-ZtRbdM3Q"/>
-  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C99SIttIEeOBr-ZtRbdM3Q" name="SendOperationEvent43" operation="_C90vLdtIEeOBr-ZtRbdM3Q"/>
-  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99SI9tIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent43" operation="_C90vLdtIEeOBr-ZtRbdM3Q"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C99SIttIEeOBr-ZtRbdM3Q" name="SendOperationEvent43"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99SI9tIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent43"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_C99SJNtIEeOBr-ZtRbdM3Q" name="JobStateUpdateHandler">
-    <ownedOperation xmi:id="_C99SJdtIEeOBr-ZtRbdM3Q" name="updateJobFromStager"/>
+    <ownedOperation xmi:id="_C99SJdtIEeOBr-ZtRbdM3Q" name="updateJobFromStager">
+      <ownedParameter xmi:id="_xoKYUAA9EeSI978P5wLkag" name="sourceTask">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_zGCrkAA9EeSI978P5wLkag" name="status">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C99SKNtIEeOBr-ZtRbdM3Q" name="SendOperationEvent44" operation="_C99SJdtIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99SKdtIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent44" operation="_C99SJdtIEeOBr-ZtRbdM3Q"/>
@@ -4159,13 +5162,38 @@
     <ownedAttribute xmi:id="_C99SSdtIEeOBr-ZtRbdM3Q" name="state" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
-    <ownedOperation xmi:id="_C99SSttIEeOBr-ZtRbdM3Q" name="setStatus"/>
+    <ownedOperation xmi:id="_C99SSttIEeOBr-ZtRbdM3Q" name="setStatus">
+      <ownedParameter xmi:id="_wcoNwABHEeSI978P5wLkag" name="Status">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C99STNtIEeOBr-ZtRbdM3Q" name="SendOperationEvent59" operation="_C99SSttIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99STdtIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent59" operation="_C99SSttIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_C99STttIEeOBr-ZtRbdM3Q" name="JobDB">
-    <ownedOperation xmi:id="_C99ST9tIEeOBr-ZtRbdM3Q" name="getJobAttributes"/>
-    <ownedOperation xmi:id="_C99SV9tIEeOBr-ZtRbdM3Q" name="setJobStatus"/>
+    <ownedOperation xmi:id="_C99ST9tIEeOBr-ZtRbdM3Q" name="getJobAttributes">
+      <ownedParameter xmi:id="_b8g5UAA_EeSI978P5wLkag" name="jobID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_d-LPEAA_EeSI978P5wLkag" name="attribute">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mHYx4AA_EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mHYK0AA_EeSI978P5wLkag"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_rRzBQAA_EeSI978P5wLkag" name="attributes" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_toX3EAA_EeSI978P5wLkag" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_toXQAAA_EeSI978P5wLkag"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_C99SV9tIEeOBr-ZtRbdM3Q" name="setJobStatus">
+      <ownedParameter xmi:id="_RbacoABAEeSI978P5wLkag" name="jobID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_S9NmkABAEeSI978P5wLkag" name="jobStatus">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_C99SWttIEeOBr-ZtRbdM3Q" name="SendOperationEvent60" operation="_C99ST9tIEeOBr-ZtRbdM3Q"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_C99SW9tIEeOBr-ZtRbdM3Q" name="ReceiveOperationEvent60" operation="_C99ST9tIEeOBr-ZtRbdM3Q"/>
@@ -4329,8 +5357,18 @@
     </edge>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_47Jf8NutEeOo1dgjRue2fQ" name="ReplicaManager">
-    <ownedOperation xmi:id="_Z_pboNuuEeOo1dgjRue2fQ" name="prestageStorageFile"/>
-    <ownedOperation xmi:id="_eJuLMNu1EeOo1dgjRue2fQ" name="getStorageFileMetadata"/>
+    <ownedOperation xmi:id="_Z_pboNuuEeOo1dgjRue2fQ" name="prestageStorageFile">
+      <ownedParameter xmi:id="_9L5B0P-bEeOAFvlXGtzbgg" name="pfnRepIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__TjR4P-bEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__Tiq0P-bEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_eJuLMNu1EeOo1dgjRue2fQ" name="getStorageFileMetadata">
+      <ownedParameter xmi:id="_DW_KwP-fEeOAFvlXGtzbgg" name="pfnRepIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FL3owP-fEeOAFvlXGtzbgg" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FL3BsP-fEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_Z_qCsNuuEeOo1dgjRue2fQ" name="SendOperationEvent62" operation="_Z_pboNuuEeOo1dgjRue2fQ"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_Z_qpwNuuEeOo1dgjRue2fQ" name="ReceiveOperationEvent62" operation="_Z_pboNuuEeOo1dgjRue2fQ"/>
@@ -4344,8 +5382,8 @@
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_vYm6ANxuEeO5dZd1SGUD5w" name="ReceiveOperationEvent66" operation="_vYlE0NxuEeO5dZd1SGUD5w"/>
   <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_DVi_YP7mEeOM5abBCfF44A" name="SendOperationEvent67" operation="_DViYUP7mEeOM5abBCfF44A"/>
   <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_DVjmcP7mEeOM5abBCfF44A" name="ReceiveOperationEvent67" operation="_DViYUP7mEeOM5abBCfF44A"/>
-  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_FKQvMP7vEeOM5abBCfF44A" name="ReceiveOperationEvent68" operation="_C90IWdtIEeOBr-ZtRbdM3Q"/>
-  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_FKRWQP7vEeOM5abBCfF44A" name="SendOperationEvent68" operation="_C90IWdtIEeOBr-ZtRbdM3Q"/>
+  <packagedElement xmi:type="uml:ReceiveOperationEvent" xmi:id="_FKQvMP7vEeOM5abBCfF44A" name="ReceiveOperationEvent68"/>
+  <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_FKRWQP7vEeOM5abBCfF44A" name="SendOperationEvent68"/>
   <profileApplication xmi:id="_C99SgttIEeOBr-ZtRbdM3Q">
     <eAnnotations xmi:id="_C99Sg9tIEeOBr-ZtRbdM3Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
