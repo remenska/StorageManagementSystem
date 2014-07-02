@@ -390,8 +390,7 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_C90IkdtIEeOBr-ZtRbdM3Q" name="getAssociatedReplicas">
-      <ownedParameter xmi:id="_POD74P-eEeOAFvlXGtzbgg" name="replicaIDs">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <ownedParameter xmi:id="_POD74P-eEeOAFvlXGtzbgg" name="replicaIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q8xgcP-eEeOAFvlXGtzbgg" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q8w5YP-eEeOAFvlXGtzbgg"/>
       </ownedParameter>
@@ -4612,7 +4611,13 @@
           <body>waitingReplicas</body>
         </argument>
       </message>
-      <message xmi:id="_U4x84P73EeOM5abBCfF44A" name="__addAssociatedReplicas" receiveEvent="_U4x84f73EeOM5abBCfF44A" sendEvent="_U4r2QP73EeOM5abBCfF44A"/>
+      <message xmi:id="_U4x84P73EeOM5abBCfF44A" name="__addAssociatedReplicas" receiveEvent="_U4x84f73EeOM5abBCfF44A" sendEvent="_U4r2QP73EeOM5abBCfF44A">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_5oHW4AH9EeSJD8qr_f4eJw">
+          <eAnnotations xmi:id="_5oHW4QH9EeSJD8qr_f4eJw" source="Parameter" references="_iCmvEP-VEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>replicasToStage</body>
+        </argument>
+      </message>
       <message xmi:id="_U4yj8f73EeOM5abBCfF44A" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_U4yj8v73EeOM5abBCfF44A" sendEvent="_U4yj8P73EeOM5abBCfF44A"/>
       <message xmi:id="_a8nHEAA1EeSI978P5wLkag" name="__checkIntegrity" receiveEvent="_a8d9IAA1EeSI978P5wLkag" sendEvent="_a8nuIAA1EeSI978P5wLkag">
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_p_zIkAHZEeSJD8qr_f4eJw" name="storageElement">
@@ -4832,7 +4837,23 @@
           <body>pfnRepIDs</body>
         </argument>
       </message>
-      <message xmi:id="_X3PFwNw_EeOo1dgjRue2fQ" name="getStorageFileMetadata" messageSort="reply" receiveEvent="_X3PFwdw_EeOo1dgjRue2fQ" sendEvent="_X3Oesdw_EeOo1dgjRue2fQ" connector="_iX0G0tu2EeOo1dgjRue2fQ"/>
+      <message xmi:id="_X3PFwNw_EeOo1dgjRue2fQ" name="getStorageFileMetadata" messageSort="reply" receiveEvent="_X3PFwdw_EeOo1dgjRue2fQ" sendEvent="_X3Oesdw_EeOo1dgjRue2fQ" connector="_iX0G0tu2EeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_N4mqAAH9EeSJD8qr_f4eJw">
+          <eAnnotations xmi:id="_N4mqAQH9EeSJD8qr_f4eJw" source="Parameter" references="_DW_KwP-fEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>terminalReplicaIDs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_O5s6oAH9EeSJD8qr_f4eJw">
+          <eAnnotations xmi:id="_O5thsAH9EeSJD8qr_f4eJw" source="Parameter" references="_GF6mQAH8EeSJD8qr_f4eJw"/>
+          <language></language>
+          <body>onlineReplicaIDs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_P7nDkAH9EeSJD8qr_f4eJw">
+          <eAnnotations xmi:id="_P7nqoAH9EeSJD8qr_f4eJw" source="Parameter" references="_JMA0gAH8EeSJD8qr_f4eJw"/>
+          <language></language>
+          <body>offlineReplicaIDs</body>
+        </argument>
+      </message>
       <message xmi:id="_clUlgNw_EeOo1dgjRue2fQ" name="updateReplicaFailure" receiveEvent="_clVzoNw_EeOo1dgjRue2fQ" sendEvent="_clVMkNw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ">
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_d2l2EP-fEeOAFvlXGtzbgg">
           <eAnnotations xmi:id="_d2mdIP-fEeOAFvlXGtzbgg" source="Parameter" references="_HmwX0P-UEeOAFvlXGtzbgg"/>
@@ -5418,6 +5439,18 @@
       <ownedParameter xmi:id="_DW_KwP-fEeOAFvlXGtzbgg" name="pfnRepIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FL3owP-fEeOAFvlXGtzbgg" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FL3BsP-fEeOAFvlXGtzbgg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_GF6mQAH8EeSJD8qr_f4eJw" name="terminalReplicaIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Hnl0YQH8EeSJD8qr_f4eJw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hnl0YAH8EeSJD8qr_f4eJw"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_JMA0gAH8EeSJD8qr_f4eJw" name="onlineReplicaIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ld5-oAH8EeSJD8qr_f4eJw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ld5XkAH8EeSJD8qr_f4eJw"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_MR7ckAH8EeSJD8qr_f4eJw" name="offlineReplicaIDs" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OYmOIAH8EeSJD8qr_f4eJw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OYlnEAH8EeSJD8qr_f4eJw"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
