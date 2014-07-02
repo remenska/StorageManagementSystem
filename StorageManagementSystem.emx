@@ -2443,9 +2443,23 @@
           <body>stagedTasks</body>
         </argument>
       </message>
-      <message xmi:id="_g1Wh8P8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_g1PNMP8KEeOAFvlXGtzbgg" sendEvent="_g1XJAP8KEeOAFvlXGtzbgg"/>
+      <message xmi:id="_g1Wh8P8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_g1PNMP8KEeOAFvlXGtzbgg" sendEvent="_g1XJAP8KEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_pInzgAHaEeSJD8qr_f4eJw" name="sourceTask">
+          <body>jobID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_sO3ywAHaEeSJD8qr_f4eJw" name="status">
+          <body>&quot;Failed&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_g1XJAf8KEeOAFvlXGtzbgg" name="updateJobFromStager" messageSort="reply" receiveEvent="_g1XwEP8KEeOAFvlXGtzbgg" sendEvent="_g1XJAv8KEeOAFvlXGtzbgg"/>
-      <message xmi:id="_wV43oP8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_wVyxAP8KEeOAFvlXGtzbgg" sendEvent="_wV43of8KEeOAFvlXGtzbgg"/>
+      <message xmi:id="_wV43oP8KEeOAFvlXGtzbgg" name="updateJobFromStager" receiveEvent="_wVyxAP8KEeOAFvlXGtzbgg" sendEvent="_wV43of8KEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_KGYqgAHaEeSJD8qr_f4eJw" name="sourceTask">
+          <body>jobID</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_MG2tcAHaEeSJD8qr_f4eJw" name="status">
+          <body>&quot;Done&quot;</body>
+        </argument>
+      </message>
       <message xmi:id="_wV43ov8KEeOAFvlXGtzbgg" name="updateJobFromStager" messageSort="reply" receiveEvent="_wV5esf8KEeOAFvlXGtzbgg" sendEvent="_wV5esP8KEeOAFvlXGtzbgg"/>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_Z0rIENtpEeOBr-ZtRbdM3Q" name="updateJobFromStager">
@@ -4386,13 +4400,39 @@
           <body>stagedReplicas</body>
         </argument>
       </message>
-      <message xmi:id="_uSrjYP8CEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_uSjAgP8CEeOAFvlXGtzbgg" sendEvent="_uSsKcP8CEeOAFvlXGtzbgg"/>
+      <message xmi:id="_uSrjYP8CEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_uSjAgP8CEeOAFvlXGtzbgg" sendEvent="_uSsKcP8CEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_5LJt4AHYEeSJD8qr_f4eJw" name="stagedReplicas">
+          <body>stagedReplicas</body>
+        </argument>
+      </message>
       <message xmi:id="_uSsxgP8CEeOAFvlXGtzbgg" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_uSt_oP8CEeOAFvlXGtzbgg" sendEvent="_uStYkP8CEeOAFvlXGtzbgg"/>
-      <message xmi:id="_4IyJAP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_4IsCYP8GEeOAFvlXGtzbgg" sendEvent="_4IyJAf8GEeOAFvlXGtzbgg"/>
-      <message xmi:id="_4IywEP8GEeOAFvlXGtzbgg" name="__checkIntegrity" messageSort="reply" receiveEvent="_4IywEv8GEeOAFvlXGtzbgg" sendEvent="_4IywEf8GEeOAFvlXGtzbgg"/>
-      <message xmi:id="_XFjjMP8HEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_XFeDoP8HEeOAFvlXGtzbgg" sendEvent="_XFjjMf8HEeOAFvlXGtzbgg"/>
+      <message xmi:id="_4IyJAP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_4IsCYP8GEeOAFvlXGtzbgg" sendEvent="_4IyJAf8GEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_OevnUAHZEeSJD8qr_f4eJw" name="storageElement">
+          <body>storageElement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_D6Gj4AHZEeSJD8qr_f4eJw" name="seReplicaIDs">
+          <body>seReplicaIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_4IywEP8GEeOAFvlXGtzbgg" name="__checkIntegrity" messageSort="reply" receiveEvent="_4IywEv8GEeOAFvlXGtzbgg" sendEvent="_4IywEf8GEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_VZKbwAHZEeSJD8qr_f4eJw" name="onlineReplicaIDs">
+          <body>onlineReplicaIDs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_YUyfYAHZEeSJD8qr_f4eJw" name="offlineReplicaIDs">
+          <body>offlineReplicaIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_XFjjMP8HEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_XFeDoP8HEeOAFvlXGtzbgg" sendEvent="_XFjjMf8HEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_q9PvoAHWEeSJD8qr_f4eJw" name="replicasToStage" type="_C98rJ9tIEeOBr-ZtRbdM3Q" behavior="_9sNXANu0EeOo1dgjRue2fQ">
+          <body>replicasToStage</body>
+        </argument>
+      </message>
       <message xmi:id="_XFkKQP8HEeOAFvlXGtzbgg" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_XFkKQv8HEeOAFvlXGtzbgg" sendEvent="_XFkKQf8HEeOAFvlXGtzbgg"/>
-      <message xmi:id="_yHRyMP8JEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_yHJ2YP8JEeOAFvlXGtzbgg" sendEvent="_yHRyMf8JEeOAFvlXGtzbgg"/>
+      <message xmi:id="_yHRyMP8JEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_yHJ2YP8JEeOAFvlXGtzbgg" sendEvent="_yHRyMf8JEeOAFvlXGtzbgg">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_t7744AHXEeSJD8qr_f4eJw" name="replicasToStage" type="_C98rJ9tIEeOBr-ZtRbdM3Q" behavior="_9sNXANu0EeOo1dgjRue2fQ">
+          <body>replicasToStage</body>
+        </argument>
+      </message>
       <message xmi:id="_yHRyMv8JEeOAFvlXGtzbgg" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_yHSZQf8JEeOAFvlXGtzbgg" sendEvent="_yHSZQP8JEeOAFvlXGtzbgg"/>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_9sNXANu0EeOo1dgjRue2fQ" name="__addAssociatedReplicas">
@@ -4577,8 +4617,22 @@
       </message>
       <message xmi:id="_U4x84P73EeOM5abBCfF44A" name="__addAssociatedReplicas" receiveEvent="_U4x84f73EeOM5abBCfF44A" sendEvent="_U4r2QP73EeOM5abBCfF44A"/>
       <message xmi:id="_U4yj8f73EeOM5abBCfF44A" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_U4yj8v73EeOM5abBCfF44A" sendEvent="_U4yj8P73EeOM5abBCfF44A"/>
-      <message xmi:id="_a8nHEAA1EeSI978P5wLkag" name="__checkIntegrity" receiveEvent="_a8d9IAA1EeSI978P5wLkag" sendEvent="_a8nuIAA1EeSI978P5wLkag"/>
-      <message xmi:id="_a8oVMAA1EeSI978P5wLkag" name="__checkIntegrity" messageSort="reply" receiveEvent="_a8o8QQA1EeSI978P5wLkag" sendEvent="_a8o8QAA1EeSI978P5wLkag"/>
+      <message xmi:id="_a8nHEAA1EeSI978P5wLkag" name="__checkIntegrity" receiveEvent="_a8d9IAA1EeSI978P5wLkag" sendEvent="_a8nuIAA1EeSI978P5wLkag">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_p_zIkAHZEeSJD8qr_f4eJw" name="storageElement">
+          <body>storageElement</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_sWdd8AHZEeSJD8qr_f4eJw" name="seReplicaIDs">
+          <body>seReplicaIDs</body>
+        </argument>
+      </message>
+      <message xmi:id="_a8oVMAA1EeSI978P5wLkag" name="__checkIntegrity" messageSort="reply" receiveEvent="_a8o8QQA1EeSI978P5wLkag" sendEvent="_a8o8QAA1EeSI978P5wLkag">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_w3FJcAHZEeSJD8qr_f4eJw" name="onlineReplicaIDs">
+          <body>onlineReplicaIDs</body>
+        </argument>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_zUPIYAHZEeSJD8qr_f4eJw" name="offlineReplicaIDs">
+          <body>offlineReplicaIDs</body>
+        </argument>
+      </message>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_MbzX8Nu1EeOo1dgjRue2fQ" name="__checkIntegrity">
       <eAnnotations xmi:id="_Mbz_Adu1EeOo1dgjRue2fQ" source="uml2.diagrams">
