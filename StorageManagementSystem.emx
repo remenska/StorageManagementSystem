@@ -306,9 +306,6 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_C90ITttIEeOBr-ZtRbdM3Q" name="__checkIntegrity" visibility="private">
-      <ownedParameter xmi:id="_t46foP-eEeOAFvlXGtzbgg" name="storageElement">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
       <ownedParameter xmi:id="_vbg60P-eEeOAFvlXGtzbgg" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XjjxwP-fEeOAFvlXGtzbgg" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XjjKsP-fEeOAFvlXGtzbgg"/>
@@ -329,16 +326,13 @@
     <ownedOperation xmi:id="_C90IYNtIEeOBr-ZtRbdM3Q" name="monitorStageRequests"/>
     <ownedOperation xmi:id="_C90IYdtIEeOBr-ZtRbdM3Q" name="execute"/>
     <ownedOperation xmi:id="_C90IYttIEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" visibility="private">
-      <ownedParameter xmi:id="_fsaWsAA4EeSI978P5wLkag" name="storageElement">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_h8bRgAA4EeSI978P5wLkag" name="replicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+      <ownedParameter xmi:id="_h8bRgAA4EeSI978P5wLkag" name="stageRequests" type="_C98rS9tIEeOBr-ZtRbdM3Q">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jchyUAA4EeSI978P5wLkag" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jchLQAA4EeSI978P5wLkag"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_C90IaNtIEeOBr-ZtRbdM3Q" name="__getStageSubmittedReplicas" visibility="private">
-      <ownedParameter xmi:id="_02tmsAA3EeSI978P5wLkag" name="stageSubmittedReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" direction="return">
+      <ownedParameter xmi:id="_02tmsAA3EeSI978P5wLkag" name="stageSubmittedReplicas" type="_C98rS9tIEeOBr-ZtRbdM3Q" direction="return">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3_7aYAA3EeSI978P5wLkag" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3_6zUAA3EeSI978P5wLkag"/>
       </ownedParameter>
@@ -1402,7 +1396,7 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvHdtaEeOBr-ZtRbdM3Q" x="-1" y="1453" height="2619"/>
               </children>
               <children xmi:type="umlnotation:UMLShape" xmi:id="_QVZvHttaEeOBr-ZtRbdM3Q" element="_QVa9gNtaEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" showListSignature="true" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvH9taEeOBr-ZtRbdM3Q" x="-1" y="1453" height="635"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvH9taEeOBr-ZtRbdM3Q" x="-1" y="1453" height="1508"/>
               </children>
               <children xmi:type="umlnotation:UMLShape" xmi:id="_QVZvINtaEeOBr-ZtRbdM3Q" element="_QVa9g9taEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" showListSignature="true" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvIdtaEeOBr-ZtRbdM3Q" x="-1" y="1453" height="661"/>
@@ -1433,7 +1427,7 @@
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvMdtaEeOBr-ZtRbdM3Q"/>
                   </children>
                   <children xmi:type="umlnotation:UMLShape" xmi:id="_QVZvMttaEeOBr-ZtRbdM3Q" element="_QVa9mNtaEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvM9taEeOBr-ZtRbdM3Q" x="-1" y="1453" height="793"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvM9taEeOBr-ZtRbdM3Q" x="-1" y="1453" height="1984"/>
                   </children>
                   <children xmi:type="umlnotation:UMLShape" xmi:id="_QVZvNNtaEeOBr-ZtRbdM3Q" element="_QVa9m9taEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvNdtaEeOBr-ZtRbdM3Q" x="-1" y="1453" height="1164"/>
@@ -1536,7 +1530,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVZvcttaEeOBr-ZtRbdM3Q" x="-385" y="-1091"/>
             </children>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QVaWINtaEeOBr-ZtRbdM3Q" points="[0, 0, 0, -265]$[795, 0, 795, -265]$[795, 265, 795, 0]$[0, 265, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QVaWIdtaEeOBr-ZtRbdM3Q" id="8667:635"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QVaWIdtaEeOBr-ZtRbdM3Q" id="8667:1508"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QVaWIttaEeOBr-ZtRbdM3Q" id="8668:264"/>
           </edges>
           <edges xmi:type="umlnotation:UMLConnector" xmi:id="_QVaWI9taEeOBr-ZtRbdM3Q" element="_QVbkVNtaEeOBr-ZtRbdM3Q" source="_QVZvFdtaEeOBr-ZtRbdM3Q" target="_QVZvFdtaEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" showListSignature="true" lineColor="8421504" lineWidth="1" showStereotype="Text">
@@ -1616,7 +1610,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QVaWX9taEeOBr-ZtRbdM3Q" y="-317"/>
             </children>
             <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QVaWYNtaEeOBr-ZtRbdM3Q" points="[0, 0, 0, -10]$[0, 10, 0, 0]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QVaWYdtaEeOBr-ZtRbdM3Q" id="3838:793"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QVaWYdtaEeOBr-ZtRbdM3Q" id="3838:1984"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QVaWYttaEeOBr-ZtRbdM3Q" id="3839:264"/>
           </edges>
           <edges xmi:type="umlnotation:UMLConnector" xmi:id="_QVaWY9taEeOBr-ZtRbdM3Q" element="_QVbkattaEeOBr-ZtRbdM3Q" source="_QVZvFdtaEeOBr-ZtRbdM3Q" target="_QVZvTdtaEeOBr-ZtRbdM3Q" fontName="Ubuntu" fontHeight="8" lineColor="8421504" lineWidth="1" showStereotype="Text">
@@ -1808,8 +1802,6 @@
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVa9tNtaEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C98rr9tIEeOBr-ZtRbdM3Q" message="_QVbke9taEeOBr-ZtRbdM3Q"/>
             </operand>
           </fragment>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVa9tdtaEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C99SFNtIEeOBr-ZtRbdM3Q" message="_QVbkadtaEeOBr-ZtRbdM3Q"/>
-          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVa9tttaEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C99SFdtIEeOBr-ZtRbdM3Q" message="_QVbkadtaEeOBr-ZtRbdM3Q"/>
           <fragment xmi:type="uml:CombinedFragment" xmi:id="_QVa9t9taEeOBr-ZtRbdM3Q" covered="_QVa9edtaEeOBr-ZtRbdM3Q _QVa9eNtaEeOBr-ZtRbdM3Q" interactionOperator="opt">
             <operand xmi:id="_QVa9uNtaEeOBr-ZtRbdM3Q">
               <guard xmi:id="_QVbkQNtaEeOBr-ZtRbdM3Q">
@@ -1830,6 +1822,8 @@
               <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVbkS9taEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C99SGdtIEeOBr-ZtRbdM3Q" message="_QVbkf9taEeOBr-ZtRbdM3Q"/>
             </operand>
           </fragment>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVa9tdtaEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C99SFNtIEeOBr-ZtRbdM3Q" message="_QVbkadtaEeOBr-ZtRbdM3Q"/>
+          <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVa9tttaEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C99SFdtIEeOBr-ZtRbdM3Q" message="_QVbkadtaEeOBr-ZtRbdM3Q"/>
         </operand>
       </fragment>
       <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QVbkTNtaEeOBr-ZtRbdM3Q" covered="_QVa9eNtaEeOBr-ZtRbdM3Q" event="_C99SDttIEeOBr-ZtRbdM3Q" message="_QVbkU9taEeOBr-ZtRbdM3Q"/>
@@ -1845,7 +1839,7 @@
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_YJewwAA4EeSI978P5wLkag">
           <eAnnotations xmi:id="_YJfX0AA4EeSI978P5wLkag" source="Parameter" references="_02tmsAA3EeSI978P5wLkag"/>
           <language></language>
-          <body>res</body>
+          <body>stageRequests</body>
         </argument>
       </message>
       <message xmi:id="_QVbkWNtaEeOBr-ZtRbdM3Q" name="getCacheReplicas" receiveEvent="_QVa9hdtaEeOBr-ZtRbdM3Q" sendEvent="_QVa9hNtaEeOBr-ZtRbdM3Q">
@@ -1877,15 +1871,10 @@
         </argument>
       </message>
       <message xmi:id="_QVbkZNtaEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" receiveEvent="_QVa9l9taEeOBr-ZtRbdM3Q" sendEvent="_QVa9lttaEeOBr-ZtRbdM3Q">
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_lB-GIAA4EeSI978P5wLkag">
-          <eAnnotations xmi:id="_lB-tMAA4EeSI978P5wLkag" source="Parameter" references="_fsaWsAA4EeSI978P5wLkag"/>
-          <language></language>
-          <body>storageElement</body>
-        </argument>
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_mwk9AAA4EeSI978P5wLkag">
           <eAnnotations xmi:id="_mwlkEAA4EeSI978P5wLkag" source="Parameter" references="_h8bRgAA4EeSI978P5wLkag"/>
           <language></language>
-          <body>seReplicaIDs</body>
+          <body>stageRequests</body>
         </argument>
       </message>
       <message xmi:id="_QVbkadtaEeOBr-ZtRbdM3Q" name="__monitorStorageElementStageRequests" messageSort="reply" receiveEvent="_QVa9tttaEeOBr-ZtRbdM3Q" sendEvent="_QVa9tdtaEeOBr-ZtRbdM3Q"/>
@@ -4333,7 +4322,13 @@
           <body>pfnRepIDs</body>
         </argument>
       </message>
-      <message xmi:id="_YUEDkNuuEeOo1dgjRue2fQ" name="prestageStorageFile" messageSort="reply" receiveEvent="_YUEqoNuuEeOo1dgjRue2fQ" sendEvent="_YUDcgduuEeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ"/>
+      <message xmi:id="_YUEDkNuuEeOo1dgjRue2fQ" name="prestageStorageFile" messageSort="reply" receiveEvent="_YUEqoNuuEeOo1dgjRue2fQ" sendEvent="_YUDcgduuEeOo1dgjRue2fQ" connector="_YUFRsNuuEeOo1dgjRue2fQ">
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_aZRoEAN4EeSJD8qr_f4eJw">
+          <eAnnotations xmi:id="_aZrQsAN4EeSJD8qr_f4eJw" source="Parameter" references="_9L5B0P-bEeOAFvlXGtzbgg"/>
+          <language></language>
+          <body>stageRequestMetadata</body>
+        </argument>
+      </message>
       <message xmi:id="_nAHBQNuuEeOo1dgjRue2fQ" name="insertStageRequest" receiveEvent="_nAIPYNuuEeOo1dgjRue2fQ" sendEvent="_nAHoUNuuEeOo1dgjRue2fQ" connector="_X468gNuqEeOo1dgjRue2fQ">
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_FWo1sP-cEeOAFvlXGtzbgg">
           <eAnnotations xmi:id="_FWpcwP-cEeOAFvlXGtzbgg" source="Parameter" references="_CMFlQP-cEeOAFvlXGtzbgg"/>
@@ -4478,11 +4473,8 @@
         </argument>
       </message>
       <message xmi:id="_4IyJAP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_4IsCYP8GEeOAFvlXGtzbgg" sendEvent="_4IyJAf8GEeOAFvlXGtzbgg">
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_OevnUAHZEeSJD8qr_f4eJw" name="storageElement">
-          <body>storageElement</body>
-        </argument>
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_D6Gj4AHZEeSJD8qr_f4eJw" name="seReplicaIDs">
-          <body>seReplicaIDs</body>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_D6Gj4AHZEeSJD8qr_f4eJw" name="waitingReplicas">
+          <body>waitingReplicas</body>
         </argument>
       </message>
       <message xmi:id="_4IywEP8GEeOAFvlXGtzbgg" name="__checkIntegrity" messageSort="reply" receiveEvent="_4IywEv8GEeOAFvlXGtzbgg" sendEvent="_4IywEf8GEeOAFvlXGtzbgg">
@@ -4504,8 +4496,8 @@
         </argument>
       </message>
       <message xmi:id="_yHRyMP8JEeOAFvlXGtzbgg" name="__addAssociatedReplicas" receiveEvent="_yHJ2YP8JEeOAFvlXGtzbgg" sendEvent="_yHRyMf8JEeOAFvlXGtzbgg">
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_t7744AHXEeSJD8qr_f4eJw" name="replicasToStage" type="_C98rJ9tIEeOBr-ZtRbdM3Q" behavior="_9sNXANu0EeOo1dgjRue2fQ">
-          <body>replicasToStage</body>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_t7744AHXEeSJD8qr_f4eJw" name="offlineReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q" behavior="_9sNXANu0EeOo1dgjRue2fQ">
+          <body>offlineReplicas</body>
         </argument>
       </message>
       <message xmi:id="_yHRyMv8JEeOAFvlXGtzbgg" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_yHSZQf8JEeOAFvlXGtzbgg" sendEvent="_yHSZQP8JEeOAFvlXGtzbgg"/>
@@ -4699,11 +4691,8 @@
       </message>
       <message xmi:id="_U4yj8f73EeOM5abBCfF44A" name="__addAssociatedReplicas" messageSort="reply" receiveEvent="_U4yj8v73EeOM5abBCfF44A" sendEvent="_U4yj8P73EeOM5abBCfF44A"/>
       <message xmi:id="_a8nHEAA1EeSI978P5wLkag" name="__checkIntegrity" receiveEvent="_a8d9IAA1EeSI978P5wLkag" sendEvent="_a8nuIAA1EeSI978P5wLkag">
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_p_zIkAHZEeSJD8qr_f4eJw" name="storageElement">
-          <body>storageElement</body>
-        </argument>
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_sWdd8AHZEeSJD8qr_f4eJw" name="seReplicaIDs">
-          <body>seReplicaIDs</body>
+        <argument xmi:type="uml:OpaqueExpression" xmi:id="_sWdd8AHZEeSJD8qr_f4eJw" name="waitingReplicas" type="_C98rJ9tIEeOBr-ZtRbdM3Q">
+          <body>waitingReplicas</body>
         </argument>
       </message>
       <message xmi:id="_a8oVMAA1EeSI978P5wLkag" name="__checkIntegrity" messageSort="reply" receiveEvent="_a8o8QQA1EeSI978P5wLkag" sendEvent="_a8o8QAA1EeSI978P5wLkag">
@@ -4913,7 +4902,7 @@
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_Gg8lUP-fEeOAFvlXGtzbgg">
           <eAnnotations xmi:id="_Gg9MYP-fEeOAFvlXGtzbgg" source="Parameter" references="_DW_KwP-fEeOAFvlXGtzbgg"/>
           <language></language>
-          <body>pfnRepIDs</body>
+          <body>replicas</body>
         </argument>
       </message>
       <message xmi:id="_X3PFwNw_EeOo1dgjRue2fQ" name="getStorageFileMetadata" messageSort="reply" receiveEvent="_X3PFwdw_EeOo1dgjRue2fQ" sendEvent="_X3Oesdw_EeOo1dgjRue2fQ" connector="_iX0G0tu2EeOo1dgjRue2fQ">
@@ -4955,20 +4944,15 @@
       </message>
       <message xmi:id="_iKyZMNw_EeOo1dgjRue2fQ" name="updateReplicaStatus" messageSort="reply" receiveEvent="_iKzAQNw_EeOo1dgjRue2fQ" sendEvent="_iKxyINw_EeOo1dgjRue2fQ" connector="_pPiMkdu2EeOo1dgjRue2fQ"/>
       <message xmi:id="_reUBgP8GEeOAFvlXGtzbgg" name="__checkIntegrity" receiveEvent="_reUokP8GEeOAFvlXGtzbgg" sendEvent="_reJpcP8GEeOAFvlXGtzbgg">
-        <argument xmi:type="uml:OpaqueExpression" xmi:id="_-JMQMP-eEeOAFvlXGtzbgg">
-          <eAnnotations xmi:id="_-JM3QP-eEeOAFvlXGtzbgg" source="Parameter" references="_t46foP-eEeOAFvlXGtzbgg"/>
-          <language></language>
-          <body>storageElement</body>
-        </argument>
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_-1HiEP-eEeOAFvlXGtzbgg">
           <eAnnotations xmi:id="_-1IJIP-eEeOAFvlXGtzbgg" source="Parameter" references="_vbg60P-eEeOAFvlXGtzbgg"/>
           <language></language>
-          <body>seReplicaIDs</body>
+          <body>replicas</body>
         </argument>
       </message>
       <message xmi:id="_reVPof8GEeOAFvlXGtzbgg" name="__checkIntegrity" messageSort="reply" receiveEvent="_reVPov8GEeOAFvlXGtzbgg" sendEvent="_reVPoP8GEeOAFvlXGtzbgg">
         <argument xmi:type="uml:OpaqueExpression" xmi:id="_ktD-oP-fEeOAFvlXGtzbgg">
-          <eAnnotations xmi:id="_ktElsP-fEeOAFvlXGtzbgg" source="Parameter" references="_t46foP-eEeOAFvlXGtzbgg"/>
+          <eAnnotations xmi:id="_ktElsP-fEeOAFvlXGtzbgg" source="Parameter"/>
           <language></language>
           <body>onlineReplicaIDs</body>
         </argument>
